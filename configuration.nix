@@ -61,11 +61,9 @@
   users.users.andy = {
      isNormalUser = true;
      extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-  #     firefox
-  #     tree
-    ];
+    shell = pkgs.zsh;
   };
+   programs.zsh.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
