@@ -18,18 +18,16 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    alacritty
     firefox
     cliphist
     tofi
     git-extras
     lazygit
-    cargo
     zsh
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    rustup
+    tmux
+    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     (pkgs.writeShellScriptBin "rebuild" ''
       pushd /home/andy/.nixos/
@@ -79,6 +77,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+
   programs = {
     git = {
       enable = true;
@@ -92,6 +91,7 @@
     zsh = {
       shellAliases = {
         a = "ls -ClAH";
+        lg = "lazygit";
       };
     };
 

@@ -72,7 +72,6 @@
     gcc
     wget
     git
-    alacritty
     wl-clipboard
   ];
 
