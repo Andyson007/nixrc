@@ -21,21 +21,24 @@
     firefox
     cliphist
     tofi
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-
+    git-extras
+    lazygit
+    cargo
+    # zsh
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
     (pkgs.writeShellScriptBin "rebuild" ''
-      echo "Hello, ${config.home.username}!"
+      ${pkgs.git}/bin/git diff
+      echo "Write a commit message"
+      read commit_message
+      ${pkgs.git}/bin/git add .
+      if [[ $? -eq 0 ]]; then
+        ${pkgs.git}/bin/git commit -m "$commit_message"
+      fi
     '')
   ];
 
@@ -71,22 +74,21 @@
   #  /etc/profiles/per-user/andy/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
-
-  programs.git = {
-    enable = true;
-    userName = "Andyson007";
-    userEmail = "andreas.jan.van.der.meulen@gmail.com";
-    extraConfig = {
-      safe.directory = "/etc/nixos";
+  programs = {
+    git = {
+      enable = true;
+      userName = "Andyson007";
+      userEmail = "andreas.jan.van.der.meulen@gmail.com";
+      extraConfig = {
+        safe.directory = "/etc/nixos";
+      };
     };
-  };
 
-  programs.bash.shellAliases = {
-    a = "ls -ClAH";
-  };
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
+    zsh = {
+        enable = true;
+    };
+    home-manager.enable = true;
+    };
 }
