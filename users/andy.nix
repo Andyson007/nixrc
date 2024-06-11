@@ -90,6 +90,7 @@
     };
 
     zsh = {
+      enable = true;
       shellAliases = {
         a = "ls -ClAH";
         lg = "lazygit";

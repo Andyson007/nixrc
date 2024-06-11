@@ -44,10 +44,10 @@
   users.users.andy = {
      isNormalUser = true;
      extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
+     shell = pkgs.zsh;
   };
-   programs.zsh.enable = true;
 
+  programs.zsh.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
