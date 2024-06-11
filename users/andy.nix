@@ -27,6 +27,7 @@
     zsh
     rustup
     tmux
+    discord
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     (pkgs.writeShellScriptBin "rebuild" ''
@@ -97,4 +98,5 @@
 
     home-manager.enable = true;
   };
+  nixpkgs.config.allowUnfree = true;
 }
