@@ -32,6 +32,7 @@
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     (pkgs.writeShellScriptBin "rebuild" ''
+      pushd /home/andy/.nixos/
       ${pkgs.git}/bin/git diff
       echo "Write a commit message"
       read commit_message
@@ -40,6 +41,7 @@
       if [[ $? -eq 0 ]]; then
         ${pkgs.git}/bin/git commit -m "$commit_message"
       fi
+      popd
     '')
   ];
 
@@ -87,6 +89,12 @@
       };
     };
 
-    home-manager.enable = true;
+    zsh = {
+      shellAliases = {
+        a = "ls -ClAH";
+      };
     };
+
+    home-manager.enable = true;
+  };
 }
