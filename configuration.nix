@@ -75,6 +75,7 @@
     wget
     git
     alacritty
+    wl-clipboard
   ];
 
 
