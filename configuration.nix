@@ -30,6 +30,7 @@
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
+  sound.enable = true;
   services.pipewire = {
     enable = true;
     pulse.enable = true;
