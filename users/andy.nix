@@ -32,6 +32,7 @@
     zoxide
     nodejs
     yarn
+    unzip
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     (pkgs.writeShellScriptBin "rebuild" ''
