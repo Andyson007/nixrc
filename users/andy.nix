@@ -33,6 +33,8 @@
     nodejs
     yarn
     unzip
+    go
+    python3
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     (pkgs.writeShellScriptBin "rebuild" ''
