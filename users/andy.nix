@@ -42,9 +42,9 @@
       ${pkgs.git}/bin/git diff
       echo "Write a commit message"
       read commit_message
-      ${pkgs.git}/bin/git add .
       sudo nixos-rebuild switch --flake /home/andy/.nixos/
       if [[ $? -eq 0 ]]; then
+        ${pkgs.git}/bin/git add .
         ${pkgs.git}/bin/git commit -m "$commit_message"
         ${pkgs.git}/bin/git push origin master
       fi
