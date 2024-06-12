@@ -29,6 +29,9 @@
     tmux
     discord
     obsidian
+    zoxide
+    nodejs
+    yarn
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     (pkgs.writeShellScriptBin "rebuild" ''
@@ -98,6 +101,8 @@
         lg = "lazygit";
       };
     };
+
+    zoxide.enable = true;
 
     home-manager.enable = true;
   };
