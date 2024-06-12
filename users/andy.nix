@@ -121,6 +121,11 @@
         a = "${pkgs.lsd}/bin/lsd -AFlg";
         lg = "lazygit";
       };
+      enableCompletion = true;
+      syntaxHighlighting.highlighters = [
+        "main"
+        "brackets"
+      ];
     };
 
     zoxide.enable = true;
