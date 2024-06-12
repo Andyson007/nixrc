@@ -62,6 +62,7 @@
     '')
   # lsp servers
     typescript
+    nodePackages_latest.typescript-language-server
     biome
     vscode-langservers-extracted
     emmet-language-server
