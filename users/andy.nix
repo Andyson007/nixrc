@@ -29,6 +29,7 @@
     tmux
     discord
     obsidian
+    spotify
     nodejs
     yarn
     unzip
