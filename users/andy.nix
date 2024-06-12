@@ -29,13 +29,20 @@
     tmux
     discord
     obsidian
-    zoxide
     nodejs
     yarn
     unzip
     go
     python3
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+
+  # Nice rust packages
+    zoxide
+    bacon
+    lsd
+    bat
+    dust
+    starship
 
     (pkgs.writeShellScriptBin "rebuild" ''
       pushd /home/andy/.nixos/
@@ -116,7 +123,9 @@
     };
 
     zoxide.enable = true;
-
+    starship = {
+      enable = true;
+    };
     home-manager.enable = true;
   };
   nixpkgs.config.allowUnfree = true;
