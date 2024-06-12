@@ -35,6 +35,7 @@
     unzip
     go
     python3
+    pulsemixer
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
   # Nice rust packages
@@ -115,6 +116,10 @@
       };
     };
 
+    alacritty = {
+
+    };
+
     zsh = {
       enable = true;
       shellAliases = {
@@ -144,6 +149,7 @@
         };
       };
     };
+
     home-manager.enable = true;
   };
   nixpkgs.config.allowUnfree = true;
