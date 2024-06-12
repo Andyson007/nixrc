@@ -36,6 +36,7 @@
     go
     python3
     pulsemixer
+    ags
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
   # Nice rust packages
