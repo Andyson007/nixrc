@@ -38,6 +38,7 @@
     pulsemixer
     ags
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    jq
 
   # Nice rust packages
     zoxide
@@ -46,6 +47,7 @@
     bat
     dust
     starship
+    ripgrep
 
     (pkgs.writeShellScriptBin "rebuild" ''
       pushd /home/andy/.config/.nixrc/
