@@ -118,7 +118,7 @@
     zsh = {
       enable = true;
       shellAliases = {
-        a = "ls -ClAH";
+        a = "${pkgs.lsd}/bin/lsd -AFlg";
         lg = "lazygit";
       };
     };
