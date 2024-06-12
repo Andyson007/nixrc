@@ -56,7 +56,7 @@
     wget
     git
     wl-clipboard
-    libsForQt5.polkit-kde-agent
+    lxqt.lxqt-policykit
   ];
 
 
