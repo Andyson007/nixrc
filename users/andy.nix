@@ -120,6 +120,7 @@
       shellAliases = {
         a = "${pkgs.lsd}/bin/lsd -AFlg";
         lg = "lazygit";
+        vim = "${pkgs.neovim}/bin/nvim";
       };
       enableCompletion = true;
       syntaxHighlighting.highlighters = [
@@ -137,7 +138,7 @@
         '';
         hostname = {
           ssh_only = false;
-          trime_at = " ";
+          trim_at = " ";
           format = "[$ssh_symbol$hostname]($style)";
           style = "red";
         };
