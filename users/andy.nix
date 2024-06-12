@@ -125,6 +125,17 @@
     zoxide.enable = true;
     starship = {
       enable = true;
+      settings = {
+        format = ''
+          $all$hostname$character
+        '';
+        hostname = {
+          ssh_only = false;
+          trime_at = " ";
+          format = "[$ssh_symbol$hostname]($style)";
+          style = "red";
+        };
+      };
     };
     home-manager.enable = true;
   };
