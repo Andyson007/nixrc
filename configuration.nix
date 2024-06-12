@@ -111,7 +111,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
-  programs.nix-ld.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 }
 

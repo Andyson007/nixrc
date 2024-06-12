@@ -50,6 +50,16 @@
       fi
       popd
     '')
+  # lsp servers
+    typescript
+    biome
+    vscode-langservers-extracted
+    emmet-language-server
+    tailwindcss
+    clang-tools
+    lua-language-server
+    taplo
+    # sql-language-server
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
