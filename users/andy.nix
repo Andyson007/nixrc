@@ -45,11 +45,11 @@
     starship
 
     (pkgs.writeShellScriptBin "rebuild" ''
-      pushd /home/andy/.nixos/
+      pushd /home/andy/.config/.nixrc/
       ${pkgs.git}/bin/git diff
       echo "Write a commit message"
       read commit_message
-      sudo nixos-rebuild switch --flake /home/andy/.nixos/
+      sudo nixos-rebuild switch --flake .
       if [[ $? -eq 0 ]]; then
         ${pkgs.git}/bin/git add .
         ${pkgs.git}/bin/git commit -m "$commit_message"
