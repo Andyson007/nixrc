@@ -39,6 +39,7 @@
     ags
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     jq
+    blender
 
   # Nice rust packages
     zoxide
@@ -166,8 +167,13 @@
     tmux = {
         enable = true;
         shortcut = "h";
-        keyMode = "vi";
         terminal = "screen-256color";
+        extraConfig = ''
+            bind h select-pane -L
+            bind j select-pane -D
+            bind k select-pane -U
+            bind l select-pane -R
+        '';
     };
 
     home-manager.enable = true;
