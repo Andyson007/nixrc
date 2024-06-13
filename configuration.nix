@@ -64,6 +64,7 @@
     git
     wl-clipboard
     lxqt.lxqt-policykit
+    hyprpaper
   ];
 
 

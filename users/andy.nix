@@ -131,10 +131,6 @@
       };
     };
 
-    alacritty = {
-
-    };
-
     zsh = {
       enable = true;
       shellAliases = {
