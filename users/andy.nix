@@ -157,6 +157,12 @@
       };
     };
 
+    tmux = {
+        shortcut = "h";
+        keyMode = "vi";
+        terminal = "screen-256color";
+    };
+
     home-manager.enable = true;
   };
   nixpkgs.config.allowUnfree = true;
