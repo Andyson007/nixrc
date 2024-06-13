@@ -158,6 +158,7 @@
     };
 
     tmux = {
+        enable = true;
         shortcut = "h";
         keyMode = "vi";
         terminal = "screen-256color";
