@@ -48,7 +48,7 @@
   };
 
   programs.zsh.enable = true;
-  environment.variables = {
+  environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
   };
   # List packages installed in system profile. To search, run:
