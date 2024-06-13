@@ -41,6 +41,8 @@
     jq
     blender
     fastfetch
+    xdotool
+    wtype
 
   # Nice rust packages
     zoxide
