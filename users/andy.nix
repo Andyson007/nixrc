@@ -40,6 +40,7 @@
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     jq
     blender
+    neofetch
 
   # Nice rust packages
     zoxide
