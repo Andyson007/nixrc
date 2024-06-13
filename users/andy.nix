@@ -58,7 +58,7 @@
       if [[ $? -eq 0 ]]; then
         ${pkgs.git}/bin/git add .
         ${pkgs.git}/bin/git commit -m "$commit_message"
-        ${pkgs.git}/bin/git push origin master
+        ${pkgs.git}/bin/git push origin main
       fi
       popd
     '')
