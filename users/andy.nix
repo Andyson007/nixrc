@@ -108,7 +108,7 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-    XDG_CONFIG_HOME = /home/andy/.config;
+    XDG_CONFIG_HOME = "$HOME/.config";
   };
 
   programs = {
