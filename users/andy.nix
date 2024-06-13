@@ -22,8 +22,8 @@
     firefox
     cliphist
     tofi
-    git-extras
     lazygit
+    delta
     zsh
     rustup
     tmux
@@ -120,6 +120,12 @@
       userEmail = "andreas.jan.van.der.meulen@gmail.com";
       extraConfig = {
         safe.directory = "/etc/nixos";
+        core.pager = "delta";
+        interactive.diffFilter = "delta --color-only";
+        delta.navigate = true;
+        delta.dark = true;
+        merge.conflictStyle = "diff3";
+        diff.colorMoved = "default";
       };
     };
 
