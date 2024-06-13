@@ -37,6 +37,10 @@
     pulse.enable = true;
   };
 
+  hardware = {
+    bluetooth.enable = true;
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
@@ -81,13 +85,12 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = false;
-  };
+  # services.openssh = {
+  #   enable = false;
+  # };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.allowedTCPPorts = [];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
