@@ -62,6 +62,9 @@
       fi
       popd
     '')
+    (pkgs.writeShellScriptBin "disable_main_monitor" ''
+    ${pkgs.hypr}/bin/hyprctl keyword monitor "eDP-1,disable"
+    '')
   # lsp servers
     typescript
     nodePackages_latest.typescript-language-server
