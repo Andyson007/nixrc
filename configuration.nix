@@ -123,6 +123,13 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+
+    ];
+  };
 }
 
 # MasonInstall bash-debug-adapter bash-language-server rust-analyzer rustfmt biome tailwindcss-language-server typescript-language-server lua-language-server html-lsp emmet-language-server emmet-ls yaml-language-server json-lsp cmakelang clangd clang-format css-lsp jq-lsp 
