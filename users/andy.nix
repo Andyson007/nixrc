@@ -140,7 +140,7 @@
       shellAliases = {
         a = "${pkgs.lsd}/bin/lsd -AFlg";
         lg = "lazygit";
-        vim = "${pkgs.neovim}/bin/nvim";
+        vim = "${nixpkgs-unstable.neovim}/bin/nvim";
       };
       enableCompletion = true;
       syntaxHighlighting.highlighters = [
