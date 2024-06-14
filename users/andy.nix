@@ -36,7 +36,7 @@
     go
     python3
     pulsemixer
-    ags
+    waybar
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     jq
     blender
