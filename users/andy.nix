@@ -43,7 +43,8 @@
     xdotool
     wtype
     entr
-    # ags stuff
+  # ags stuff
+    ags
     gtksourceview
     webkitgtk
     accountsservice
