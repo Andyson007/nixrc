@@ -36,7 +36,6 @@
     go
     python3
     pulsemixer
-    ags
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     jq
     blender
@@ -44,6 +43,11 @@
     xdotool
     wtype
     entr
+    # ags stuff
+    gtksourceview
+    webkitgtk
+    accountsservice
+
   # Nice rust packages
     zoxide
     bacon
