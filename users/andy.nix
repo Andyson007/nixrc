@@ -43,11 +43,7 @@
     xdotool
     wtype
     entr
-  # ags stuff
     ags
-    gtksourceview
-    webkitgtk
-    accountsservice
 
   # Nice rust packages
     zoxide
