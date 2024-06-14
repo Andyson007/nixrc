@@ -43,7 +43,7 @@
     fastfetch
     xdotool
     wtype
-
+    entr
   # Nice rust packages
     zoxide
     bacon
