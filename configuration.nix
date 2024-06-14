@@ -50,7 +50,7 @@
   users.users.andy = {
      isNormalUser = true;
      extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-     # shell = pkgs.zsh;
+     shell = pkgs.zsh;
   };
 
   programs.zsh.enable = true;
