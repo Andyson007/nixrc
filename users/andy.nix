@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs-unstable,  ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -17,7 +17,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     alacritty
     firefox
     cliphist
@@ -80,7 +80,9 @@
     lua-language-server
     taplo
     # sql-language-server
-  ];
+  ]) ++ (with nixpkgs-unstable; [
+    neovim
+  ]);
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -177,5 +179,4 @@
 
     home-manager.enable = true;
   };
-  nixpkgs.config.allowUnfree = true;
 }

@@ -3,8 +3,8 @@
 	description = "Flake";
 
 	inputs = {
-		nixpkgs.url = "nixpkgs/nixos-24.05";
-		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
 		home-manager = {
 			url = "github:nix-community/home-manager/release-24.05";
@@ -12,14 +12,33 @@
 		};
 	};
 
-	outputs = { self, nixpkgs, ... }@inputs: 
+	outputs = inputs@{
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    ... 
+ }: 
   {
-		nixosConfigurations.andyco = nixpkgs.lib.nixosSystem {
+		nixosConfigurations.andyco = nixpkgs.lib.nixosSystem rec {
 			system = "x86_64-linux";
-			specialArgs = {inherit inputs;};
+			specialArgs = {
+        inherit inputs;
+      };
 			modules = [
 				./configuration.nix
-				inputs.home-manager.nixosModules.default
+				home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.andy = import ./users/andy.nix;
+          home-manager.extraSpecialArgs = {
+            nixpkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+        }
 			];
 		};
 	};
