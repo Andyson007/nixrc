@@ -66,6 +66,7 @@
     wl-clipboard
     lxqt.lxqt-policykit
     hyprpaper
+    xdg-desktop-portal-wlr
   ];
 
 
