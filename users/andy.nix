@@ -54,8 +54,6 @@
     starship
     ripgrep
 
-    hyprpicker
-
     (pkgs.writeShellScriptBin "rebuild" ''
       pushd /home/andy/.config/.nixrc/
       ${pkgs.git}/bin/git diff
