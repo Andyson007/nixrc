@@ -24,6 +24,10 @@
 			system = "x86_64-linux";
 			specialArgs = {
         inherit inputs;
+        nixpkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
       };
 			modules = [
 				./configuration.nix

@@ -63,7 +63,7 @@
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     gcc
     wget
     git
@@ -72,7 +72,8 @@
     hyprpaper
     hypridle
     xdg-desktop-portal-wlr
-    swaylock
+  ]) ++ [
+    nixpkgs-unstable.hyprlock
   ];
 
 
