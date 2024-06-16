@@ -81,6 +81,8 @@
     lua-language-server
     taplo
     # sql-language-server
+    nodePackages_latest.bash-language-server
+
   ]) ++ (with nixpkgs-unstable; [
     neovim
   ]);
@@ -116,8 +118,13 @@
   #
   #  /etc/profiles/per-user/andy/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "nvim";
+  home = {
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    sessionPath = [
+      "$HOME/.cargo/bin"
+    ];
   };
 
   programs = {
