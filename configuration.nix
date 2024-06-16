@@ -70,7 +70,6 @@
     wl-clipboard
     lxqt.lxqt-policykit
     hyprpaper
-    hyprlock
     hypridle
     xdg-desktop-portal-wlr
     swaylock
