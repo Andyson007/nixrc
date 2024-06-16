@@ -73,6 +73,7 @@
     hyprlock
     hypridle
     xdg-desktop-portal-wlr
+    swaylock
   ];
 
 
