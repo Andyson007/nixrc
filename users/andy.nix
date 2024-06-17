@@ -45,6 +45,8 @@
     entr
     ags
     wine
+    dolphin
+
   # Nice rust packages
     zoxide
     bacon
