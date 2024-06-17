@@ -46,6 +46,8 @@
     ags
     wine
     dolphin
+    slurp
+    grim
 
   # Nice rust packages
     zoxide
