@@ -44,7 +44,7 @@
     wtype
     entr
     ags
-
+    wine
   # Nice rust packages
     zoxide
     bacon
