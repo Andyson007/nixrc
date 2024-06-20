@@ -44,10 +44,10 @@
     wtype
     entr
     ags
-    wine
     dolphin
     slurp
     grim
+    vale
 
   # Nice rust packages
     zoxide
