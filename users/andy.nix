@@ -50,6 +50,7 @@
     vale
     btop
     xxd
+    linuxPackages_latest.perf
 
   # Nice rust packages
     zoxide
