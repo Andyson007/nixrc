@@ -48,6 +48,7 @@
     slurp
     grim
     vale
+    btop
 
   # Nice rust packages
     zoxide
