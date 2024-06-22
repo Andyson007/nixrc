@@ -49,6 +49,7 @@
     grim
     vale
     btop
+    xxd
 
   # Nice rust packages
     zoxide
