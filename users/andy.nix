@@ -51,6 +51,7 @@
     btop
     xxd
     linuxPackages_latest.perf
+    ghc
 
   # Nice rust packages
     zoxide
