@@ -90,7 +90,8 @@
     taplo
     # sql-language-server
     nodePackages_latest.bash-language-server
-    dhall-lsp-server
+    haskellPackages.ghcide
+
   ]) ++ (with nixpkgs-unstable; [
     neovim
   ]);
