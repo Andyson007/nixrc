@@ -52,7 +52,12 @@
     xxd
     linuxPackages_latest.perf
     ghc
+
+  # Lichess
     flutter
+    coursier
+    jdk22
+    corepack_22
 
   # Nice rust packages
     zoxide
