@@ -52,6 +52,7 @@
     xxd
     linuxPackages_latest.perf
     ghc
+    flutter
 
   # Nice rust packages
     zoxide
