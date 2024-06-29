@@ -56,6 +56,7 @@
     pkg-config
     pango
     cairo
+    webp-pixbuf-loader
 
   # Lichess
     flutter
