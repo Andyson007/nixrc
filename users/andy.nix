@@ -55,6 +55,7 @@
     openssl.dev
     pkg-config
     pango
+    cairo
 
   # Lichess
     flutter
