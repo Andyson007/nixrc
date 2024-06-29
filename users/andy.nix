@@ -55,7 +55,7 @@
   # Tauri
     pkg-config
     dbus
-    openssl_3
+    openssl_3.dev
     glib
     gtk3
     libsoup
