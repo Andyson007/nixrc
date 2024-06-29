@@ -54,7 +54,7 @@
     ghc
     openssl.dev
     pkg-config
-    pango
+    pango.dev
     cairo
     webp-pixbuf-loader
 
