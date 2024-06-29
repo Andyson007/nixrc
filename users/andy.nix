@@ -56,6 +56,7 @@
     pkg-config
     dbus
     openssl
+    openssl.dev
     glib
     gtk3
     libsoup
