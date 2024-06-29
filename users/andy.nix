@@ -55,7 +55,7 @@
   # Tauri
     pkg-config
     dbus
-    openssl.dev
+    openssl
     glib
     gtk3
     libsoup
@@ -105,6 +105,7 @@
     clang-tools
     lua-language-server
     taplo
+
     # sql-language-server
     nodePackages_latest.bash-language-server
     haskell-language-server
