@@ -52,6 +52,15 @@
     xxd
     linuxPackages_latest.perf
     ghc
+  # Tauri
+    pkg-config
+    dbus
+    openssl_3
+    glib
+    gtk3
+    libsoup
+    webkitgtk
+    librsvg
 
   # Lichess
     flutter
