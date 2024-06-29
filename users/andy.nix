@@ -52,6 +52,7 @@
     xxd
     linuxPackages_latest.perf
     ghc
+    openssl
     pkg-config
 
   # Lichess
