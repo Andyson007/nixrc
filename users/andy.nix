@@ -52,11 +52,15 @@
     xxd
     linuxPackages_latest.perf
     ghc
-    openssl.dev
     pkg-config
-    pango.dev
+    pango
+    webkitgtk
+    gtk3
     cairo
-    webp-pixbuf-loader
+    glib
+    dbus
+    openssl_3
+    librsvg
 
   # Lichess
     flutter
