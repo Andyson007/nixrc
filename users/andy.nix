@@ -54,6 +54,7 @@
     ghc
     openssl.dev
     pkg-config
+    pango
 
   # Lichess
     flutter
