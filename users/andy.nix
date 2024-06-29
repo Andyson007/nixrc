@@ -58,6 +58,8 @@
     coursier
     jdk22
     corepack_22
+    # mongodb
+    # redis
 
   # Nice rust packages
     zoxide
@@ -100,6 +102,7 @@
 
   ]) ++ (with nixpkgs-unstable; [
     neovim
+    stockfish
   ]);
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
