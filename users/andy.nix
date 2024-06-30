@@ -79,6 +79,7 @@
     dust
     starship
     ripgrep
+    cargo-generate
 
     (pkgs.writeShellScriptBin "rebuild" ''
       pushd /home/andy/.config/.nixrc/
