@@ -62,6 +62,7 @@
     libsoup
     webkitgtk
     librsvg
+    file
 
   # Lichess
     flutter
