@@ -63,6 +63,7 @@
     webkitgtk
     librsvg
     file
+    cmake
 
   # Lichess
     flutter
