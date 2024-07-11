@@ -64,6 +64,7 @@
     librsvg
     file
     cmake
+    gnumake
 
   # Lichess
     flutter
