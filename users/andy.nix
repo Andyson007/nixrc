@@ -65,6 +65,7 @@
     file
     cmake
     gnumake
+    lean
 
   # Lichess
     flutter
