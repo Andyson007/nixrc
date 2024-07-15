@@ -66,7 +66,7 @@
     cmake
     gnumake
   # Lean
-    lean4
+    elan
     mathlibtools
 
   # Lichess
