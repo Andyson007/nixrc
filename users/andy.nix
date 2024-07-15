@@ -65,7 +65,9 @@
     file
     cmake
     gnumake
+  # Lean
     lean4
+    mathlibtools
 
   # Lichess
     flutter
