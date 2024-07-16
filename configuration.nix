@@ -150,6 +150,7 @@
 
     ];
   };
+  security.polkit.enable = true;
 }
 
 # MasonInstall bash-debug-adapter bash-language-server rust-analyzer rustfmt biome tailwindcss-language-server typescript-language-server lua-language-server html-lsp emmet-language-server emmet-ls yaml-language-server json-lsp cmakelang clangd clang-format css-lsp jq-lsp 
