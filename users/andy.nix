@@ -53,7 +53,6 @@
     linuxPackages_latest.perf
     ghc
   # Tauri
-    pkg-config
     dbus
     openssl
     openssl.dev

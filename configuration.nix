@@ -73,6 +73,14 @@
     hyprpaper
     hypridle
     xdg-desktop-portal-wlr
+    libinput
+    wayland
+    wayland-protocols
+    pkg-config
+    xorg.xcbutil
+    xorg.xcbutilwm
+    wlroots
+    xwayland
   ]) ++ [
     nixpkgs-unstable.hyprlock
   ];
