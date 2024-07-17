@@ -52,6 +52,8 @@
     xxd
     linuxPackages_latest.perf
     ghc
+    qt6ct
+    candy-icons
   # Tauri
     dbus
     openssl
@@ -64,7 +66,6 @@
     file
     cmake
     gnumake
-    qt6ct
   # Lean
     elan
     mathlibtools
