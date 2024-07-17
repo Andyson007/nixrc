@@ -116,11 +116,10 @@
     # sql-language-server
     nodePackages_latest.bash-language-server
     haskell-language-server
-
+    nnn
   ]) ++ (with nixpkgs-unstable; [
     neovim
     stockfish
-    dolphin
   ]);
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
