@@ -118,6 +118,9 @@
     nodePackages_latest.bash-language-server
     haskell-language-server
     nnn
+    cowsay
+    fortune
+    toilet
   ]) ++ (with nixpkgs-unstable; [
     neovim
     stockfish
