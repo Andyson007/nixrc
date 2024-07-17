@@ -64,6 +64,7 @@
     file
     cmake
     gnumake
+    qt6ct
   # Lean
     elan
     mathlibtools
