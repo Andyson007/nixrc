@@ -64,6 +64,7 @@
     file
     cmake
     gnumake
+    feh
   # Lean
     elan
     mathlibtools
