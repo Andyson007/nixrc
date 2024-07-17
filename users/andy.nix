@@ -44,7 +44,6 @@
     wtype
     entr
     ags
-    dolphin
     slurp
     grim
     vale
@@ -121,6 +120,7 @@
   ]) ++ (with nixpkgs-unstable; [
     neovim
     stockfish
+    dolphin
   ]);
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
