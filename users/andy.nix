@@ -52,7 +52,6 @@
     xxd
     linuxPackages_latest.perf
     ghc
-    qt6ct
     candy-icons
   # Tauri
     dbus
