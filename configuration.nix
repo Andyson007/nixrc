@@ -61,6 +61,8 @@
   environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
     NIXOS_OZONE_WL = 1;
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_STYLE_OVERRIDE = "qt6ct";
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -73,16 +75,7 @@
     hyprpaper
     hypridle
     xdg-desktop-portal-wlr
-  # Dwl
-    libinput
-    wayland
-    wayland-protocols
-    pkg-config
-    xorg.xcbutil
-    xorg.xcbutilwm
-    wlroots
-    xwayland
-    libxkbcommon
+    qt6ct
   ]) ++ [
     nixpkgs-unstable.hyprlock
   ];
