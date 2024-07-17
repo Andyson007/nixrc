@@ -151,6 +151,19 @@
     ];
   };
   security.polkit.enable = true;
+
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
+
 }
 
 # MasonInstall bash-debug-adapter bash-language-server rust-analyzer rustfmt biome tailwindcss-language-server typescript-language-server lua-language-server html-lsp emmet-language-server emmet-ls yaml-language-server json-lsp cmakelang clangd clang-format css-lsp jq-lsp 
