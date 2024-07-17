@@ -185,6 +185,7 @@
       enable = true;
       shellAliases = {
         a = "${pkgs.lsd}/bin/lsd -AFlg";
+        l = "${pkgs.lsd}/bin/lsd -Flg";
         lg = "lazygit";
         vim = "${nixpkgs-unstable.neovim}/bin/nvim";
       };
