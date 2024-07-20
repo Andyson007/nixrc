@@ -67,7 +67,6 @@
     feh
   # Lean
     elan
-    mathlibtools
 
   # Lichess
     flutter
