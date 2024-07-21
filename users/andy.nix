@@ -52,6 +52,8 @@
     linuxPackages_latest.perf
     ghc
     candy-icons
+  # Networking
+    nmap
   # Tauri
     dbus
     openssl
