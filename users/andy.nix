@@ -54,6 +54,7 @@
     candy-icons
   # Networking
     nmap
+    netcat-gnu
   # Tauri
     dbus
     openssl
