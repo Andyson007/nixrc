@@ -155,6 +155,7 @@
     dates = "02:00";
     randomizedDelaySec = "45min";
   };
+
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "0xProto" ]; })
   ];
