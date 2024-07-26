@@ -155,7 +155,7 @@
     dates = "02:00";
     randomizedDelaySec = "45min";
   };
-
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "0xProto" ]; })
+  ];
 }
-
-# MasonInstall bash-debug-adapter bash-language-server rust-analyzer rustfmt biome tailwindcss-language-server typescript-language-server lua-language-server html-lsp emmet-language-server emmet-ls yaml-language-server json-lsp cmakelang clangd clang-format css-lsp jq-lsp 
