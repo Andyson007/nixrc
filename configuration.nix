@@ -75,6 +75,7 @@
     hypridle
     xdg-desktop-portal-wlr
     qt6ct
+    nerdfonts
   ]) ++ [
     nixpkgs-unstable.hyprlock
   ];
