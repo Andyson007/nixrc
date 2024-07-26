@@ -36,7 +36,7 @@
     go
     python3
     pulsemixer
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "0xProto" ]; })
     jq
     blender
     fastfetch
