@@ -74,6 +74,7 @@
     hyprpaper
     hypridle
     xdg-desktop-portal-wlr
+    xdg-utils
     qt6ct
     nerdfonts
   ]) ++ [

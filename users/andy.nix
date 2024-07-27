@@ -124,6 +124,7 @@
     toilet
   ]) ++ (with nixpkgs-unstable; [
     neovim
+    neovide
     stockfish
   ]);
 
