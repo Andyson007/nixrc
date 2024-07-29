@@ -87,23 +87,6 @@
     starship
     ripgrep
     cargo-generate
-
-    (pkgs.writeShellScriptBin "rebuild" ''
-      pushd /home/andy/.config/.nixrc/
-      ${pkgs.git}/bin/git diff
-      echo "Write a commit message"
-      read commit_message
-      sudo nixos-rebuild switch --flake .
-      if [[ $? -eq 0 ]]; then
-        ${pkgs.git}/bin/git add .
-        ${pkgs.git}/bin/git commit -m "$commit_message"
-        ${pkgs.git}/bin/git push origin main
-      fi
-      popd
-    '')
-    (pkgs.writeShellScriptBin "disable_main_monitor" ''
-    ${pkgs.hyprland}/bin/hyprctl keyword monitor "eDP-1,disable"
-    '')
   # lsp servers
     typescript
     nodePackages_latest.typescript-language-server
