@@ -93,7 +93,7 @@
     (pkgs.writeShellScriptBin "disable_main_monitor" ''
     ${pkgs.hyprland}/bin/hyprctl keyword monitor "eDP-1,disable"
     '')
-    (pkgs.writeShellScriptBin "disable_main_monitor" ''
+    (pkgs.writeShellScriptBin "toggle_opacity" ''
     prev_opcatiy=$(${pkgs.hyprland}/bin/hyprctl getoption decoration:fullscreen_opacity | awk 'NR==1{print $2}')
     if [[ "$prev_opcatiy" = 1.000000 ]]; then
       ${pkgs.hyprland}/bin/hyprctl --batch "\
