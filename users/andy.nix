@@ -111,6 +111,7 @@
     vscode-langservers-extracted
     emmet-language-server
     tailwindcss
+    tailwindcss-language-server
     clang-tools
     lua-language-server
     taplo
