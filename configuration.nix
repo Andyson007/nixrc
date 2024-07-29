@@ -93,6 +93,21 @@
     (pkgs.writeShellScriptBin "disable_main_monitor" ''
     ${pkgs.hyprland}/bin/hyprctl keyword monitor "eDP-1,disable"
     '')
+    (pkgs.writeShellScriptBin "disable_main_monitor" ''
+    prev_opcatiy=$(${pkgs.hyprland}/bin/hyprctl getoption decoration:fullscreen_opacity | awk 'NR==1{print $2}')
+    if [[ "$prev_opcatiy" = 1.000000 ]]; then
+      ${pkgs.hyprland}/bin/hyprctl --batch "\
+        keyword decoration:active_opacity .9;\
+        keyword decoration:inactive_opacity .9;\
+        keyword decoration:fullscreen_opacity .9"
+    else
+      ${pkgs.hyprland}/bin/hyprctl --batch "\
+        keyword decoration:active_opacity 1;\
+        keyword decoration:inactive_opacity 1;\
+        keyword decoration:fullscreen_opacity 1"
+    fi
+
+    '')
   ]) ++ [
     nixpkgs-unstable.hyprlock
   ];
