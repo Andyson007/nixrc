@@ -18,6 +18,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = (with pkgs; [
+    fd
     alacritty
     firefox
     cliphist
@@ -26,7 +27,6 @@
     delta
     zsh
     rustup
-    tmux
     discord
     obsidian
     spotify
