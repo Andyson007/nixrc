@@ -87,6 +87,8 @@
     starship
     ripgrep
     cargo-generate
+    rink
+
   # lsp servers
     typescript
     nodePackages_latest.typescript-language-server
