@@ -33,6 +33,8 @@
     unzip
     go
     python3
+    poetry
+    gcc-unwrapped
     pulsemixer
     jq
     blender
