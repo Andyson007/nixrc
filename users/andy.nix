@@ -6,8 +6,6 @@
   home.username = "andy";
   home.homeDirectory = "/home/andy";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
   #
   # You should not change this value, even if you update Home Manager. If you do
@@ -35,7 +33,6 @@
     unzip
     go
     python3
-    conda
     pulsemixer
     jq
     blender
