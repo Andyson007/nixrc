@@ -35,7 +35,7 @@
     unzip
     go
     python3
-    python311Packages.pip
+    conda
     pulsemixer
     jq
     blender
