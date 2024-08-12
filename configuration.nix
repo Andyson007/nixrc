@@ -62,7 +62,7 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     NIXOS_OZONE_WL = 1;
     QT_QPA_PLATFORMTHEME = "qt6ct";
-    LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib/";
+    LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib/:/run/opengl-driver/lib/";
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
