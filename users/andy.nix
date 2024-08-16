@@ -56,6 +56,7 @@
       kill $wdisplays_pid
       ${pkgs.hyprland}/bin/hyprctl dispatch movecurrentworkspacetomonitor $monitor
     '')
+    nwg-displays
   # Networking
     nmap
     netcat-gnu
