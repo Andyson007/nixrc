@@ -32,14 +32,16 @@
 			modules = [
 				./configuration.nix
 				home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
 
-          home-manager.users.andy = import ./users/andy/andy.nix;
-          home-manager.extraSpecialArgs = {
-            nixpkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
+            users.andy = import ./users/andy/andy.nix;
+            extraSpecialArgs = {
+              nixpkgs-unstable = import nixpkgs-unstable {
+                inherit system;
+                config.allowUnfree = true;
+              };
             };
           };
         }
