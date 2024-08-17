@@ -4,35 +4,29 @@
     enable = true;
     systemdTarget = "hyprland-session.target";
 
-    profiles = {
-      undocked = {
-        outputs = [
+    settings = [
+      {
+        profile.name = "docked_home";
+        profile.outputs = [
           {
             criteria = "eDP-1";
-            scale = 1.1;
+            mode = "1920x1080@60.01";
+            position = "1300x1200";
+            scale = 1.0;
             status = "enable";
           }
         ];
-      };
-
-      home_office = {
-        outputs = [
-          {
-            criteria = "GIGA-BYTE TECHNOLOGY CO., LTD. Gigabyte M32U 21351B000087";
-            position = "3840,0";
-            mode = "3840x2160@60Hz";
-          }
-          {
-            criteria = "Dell Inc. DELL G3223Q 82X70P3";
-            position = "0,0";
-            mode = "3840x2160@60Hz";
-          }
+      }
+      { 
+        profile.name = "undocked";
+        profile.outputs = [
           {
             criteria = "eDP-1";
-            status = "disable";
+            scale = 1.0;
+            status = "enable";
           }
         ];
-      };
-    };
+      }
+    ];
   };
 }
