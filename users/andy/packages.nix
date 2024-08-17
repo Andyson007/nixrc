@@ -1,6 +1,7 @@
 { pkgs, nixpkgs-unstable, ... }:
 {
   home.packages = (with pkgs; [
+    kanshi
     fd
     alacritty
     firefox
