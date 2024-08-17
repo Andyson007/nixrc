@@ -15,6 +15,20 @@
             scale = 1.0;
             status = "enable";
           }
+          {
+            criteria = "DP-4";
+            mode = "1920x1200@59.95";
+            position = "0,0";
+            scale = 1.0;
+            status = "enable";
+          }
+          {
+            criteria = "DP-6";
+            mode = "1920x1200@59.95";
+            position = "1920,0";
+            scale = 1.0;
+            status = "enable";
+          }
         ];
       }
       { 
