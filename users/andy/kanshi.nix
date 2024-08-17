@@ -10,7 +10,6 @@
         profile.outputs = [
           {
             criteria = "eDP-1";
-            mode = "prefered";
             position = "1300,1200";
             scale = 1.2;
             status = "enable";
