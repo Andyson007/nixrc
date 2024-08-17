@@ -35,7 +35,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.andy = import ./users/andy.nix;
+          home-manager.users.andy = import ./users/andy/andy.nix;
           home-manager.extraSpecialArgs = {
             nixpkgs-unstable = import nixpkgs-unstable {
               inherit system;
