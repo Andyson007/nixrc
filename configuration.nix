@@ -6,9 +6,9 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
-      # inputs.home-manager.nixosModules.default
+      ./packages.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -61,62 +61,6 @@
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 
-  environment.systemPackages = (with pkgs; [
-    stdenv
-    gcc
-    wget
-    git
-    wl-clipboard
-    lxqt.lxqt-policykit
-    hyprpaper
-    hypridle
-    xdg-desktop-portal-wlr
-    xdg-utils
-    qt6ct
-    nerdfonts
-    (pkgs.writeShellScriptBin "rebuild" ''
-      pushd /home/andy/.config/.nixrc/
-      ${pkgs.git}/bin/git diff
-      echo "Write a commit message"
-      read commit_message
-      sudo nixos-rebuild switch --flake .
-      if [[ $? -eq 0 ]]; then
-        ${pkgs.git}/bin/git add .
-        ${pkgs.git}/bin/git commit -m "$commit_message"
-        ${pkgs.git}/bin/git push origin main
-      fi
-      popd
-    '')
-    (pkgs.writeShellScriptBin "disable_main_monitor" ''
-    ${pkgs.hyprland}/bin/hyprctl keyword monitor "eDP-1,disable"
-    '')
-    (pkgs.writeShellScriptBin "toggle_opacity" ''
-    prev_opcatiy=$(${pkgs.hyprland}/bin/hyprctl getoption decoration:fullscreen_opacity | awk 'NR==1{print $2}')
-    if [[ "$prev_opcatiy" = 1.000000 ]]; then
-      ${pkgs.hyprland}/bin/hyprctl --batch "\
-        keyword decoration:active_opacity .9;\
-        keyword decoration:inactive_opacity .9;\
-        keyword decoration:fullscreen_opacity .9"
-    else
-      ${pkgs.hyprland}/bin/hyprctl --batch "\
-        keyword decoration:active_opacity 1;\
-        keyword decoration:inactive_opacity 1;\
-        keyword decoration:fullscreen_opacity 1"
-    fi
-
-    '')
-  ]) ++ [
-    nixpkgs-unstable.hyprlock
-  ];
-
-
-	# home-manager = {
-	# 	extraSpecialArgs = {inherit inputs; inherit nixpkgs-unstable; };
-	# 	users = {
-	# 		"andy" = import ./users/andy.nix;
-	# 	};
-	# };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -138,10 +82,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
