@@ -210,19 +210,6 @@
       };
     };
 
-    tmux = {
-        enable = true;
-        shortcut = "h";
-        terminal = "screen-256color";
-        extraConfig = ''
-            bind h select-pane -L
-            bind j select-pane -D
-            bind k select-pane -U
-            bind l select-pane -R
-        '';
-    };
-
     home-manager.enable = true;
-
   };
 }
