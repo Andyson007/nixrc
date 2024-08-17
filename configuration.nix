@@ -9,6 +9,7 @@
     [
       ./hardware-configuration.nix
       ./packages.nix
+      ./kanshi.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
