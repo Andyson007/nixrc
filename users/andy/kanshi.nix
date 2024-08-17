@@ -12,7 +12,7 @@
             criteria = "eDP-1";
             mode = "1920x1080@60.01";
             position = "1300,1200";
-            scale = 1.0;
+            scale = 1.2;
             status = "enable";
           }
           {
