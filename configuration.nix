@@ -33,9 +33,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -63,8 +60,7 @@
     NIXOS_OZONE_WL = 1;
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+
   environment.systemPackages = (with pkgs; [
     stdenv
     gcc
