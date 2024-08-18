@@ -11,7 +11,6 @@
     delta
     zsh
     rustup
-    discord
     obsidian
     spotify
     nodejs
@@ -105,5 +104,6 @@
     neovide
     stockfish
     ollama
+    discord
   ]);
 }
