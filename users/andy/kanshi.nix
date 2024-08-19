@@ -31,7 +31,7 @@
             }
           ];
           exec = pkgs.lib.strings.concatStrings [
-            "${pkgs.hyprland}/bin/hyprctl --batch dispatch"
+            "${pkgs.hyprland}/bin/hyprctl --batch dispatch "
             (
               pkgs.lib.strings.concatStrings
               (
@@ -63,7 +63,7 @@
             }
           ];
           exec = pkgs.lib.strings.concatStrings [
-            "${pkgs.hyprland}/bin/hyprctl --batch dispatch"
+            "${pkgs.hyprland}/bin/hyprctl --batch dispatch "
             (
               pkgs.lib.strings.concatStrings
               (
