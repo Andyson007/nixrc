@@ -42,6 +42,7 @@
 
   hardware = {
     bluetooth.enable = true;
+    opengl.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
