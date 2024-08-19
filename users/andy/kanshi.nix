@@ -15,14 +15,14 @@
             status = "enable";
           }
           {
-            criteria = "Dell Inc. DELL U2410 F525M29HC43L";
+            criteria = "Dell Inc. DELL U2410 F525M27UD0DL";
             mode = "1920x1200@59.95";
             position = "0,0";
             scale = 1.0;
             status = "enable";
           }
           {
-            criteria = "Dell Inc. DELL U2410 F525M27UD0DL";
+            criteria = "Dell Inc. DELL U2410 F525M29HC43L";
             mode = "1920x1200@59.95";
             position = "1920,0";
             scale = 1.0;
