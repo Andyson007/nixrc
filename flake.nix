@@ -20,6 +20,20 @@
     ... 
  }: 
   {
+		nixosConfigurations.live = nixpkgs.lib.nixosSystem rec {
+			system = "x86_64-linux";
+			specialArgs = {
+        inherit inputs;
+        nixpkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
+			modules = [
+        (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
+				./hosts/iso/configuration.nix
+			];
+		};
 		nixosConfigurations.andyco = nixpkgs.lib.nixosSystem rec {
 			system = "x86_64-linux";
 			specialArgs = {
