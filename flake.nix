@@ -30,7 +30,7 @@
         };
       };
 			modules = [
-				./configuration.nix
+				./hosts/latitude/configuration.nix
 				home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
