@@ -53,15 +53,15 @@
         text = ''
     ${pkgs.hyprland}/bin/hyprctl --batch dispatch "\
     workspace 1,monitor:eDP-1,                                  on-created-empty: alacritty;\
-    workspace 2,monitor:eDP-1,                                  on-created-empty: alacritty;\
-    workspace 3,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL;\
-    workspace 4,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL;\
-    workspace 5,monitor:desc:Dell Inc. DELL U2410 F525M29HC43L, on-created-empty: firefox;\
-    workspace 6,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL, on-created-empty: obsidian;\
-    workspace 7,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL, on-created-empty: spotify;\
-    workspace 8,monitor:eDP-1,                                  on-created-empty: \"${pkgs.neovide}/bin/neovide -- --cmd 'cd ~/vaults/Knowledge/'\";\
-    workspace 9,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL, on-created-empty: discord;\
-    workspace 10,monitor:eDP-1"
+    keyword workspace 2,monitor:eDP-1,                                  on-created-empty: alacritty;\
+    keyword workspace 3,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL;\
+    keyword workspace 4,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL;\
+    keyword workspace 5,monitor:desc:Dell Inc. DELL U2410 F525M29HC43L, on-created-empty: firefox;\
+    keyword workspace 6,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL, on-created-empty: obsidian;\
+    keyword workspace 7,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL, on-created-empty: spotify;\
+    keyword workspace 8,monitor:eDP-1,                                  on-created-empty: \"${pkgs.neovide}/bin/neovide -- --cmd 'cd ~/vaults/Knowledge/'\";\
+    keyword workspace 9,monitor:desc:Dell Inc. DELL U2410 F525M27UD0DL, on-created-empty: discord;\
+    keyword workspace 10,monitor:eDP-1"
       '';
       executable = true;
     };
@@ -69,15 +69,15 @@
         text = ''
       ${pkgs.hyprland}/bin/hyprctl --batch dispatch "\
     workspace 1,monitor:eDP-1, on-created-empty: alacritty;\
-    workspace 2,monitor:eDP-1, on-created-empty: alacritty;\
-    workspace 3,monitor:eDP-1;\
-    workspace 4,monitor:eDP-1;\
-    workspace 5,monitor:eDP-1;\
-    workspace 6,monitor:eDP-1, on-created-empty: obsidian;\
-    workspace 7,monitor:eDP-1, on-created-empty: spotify;\
-    workspace 8,monitor:eDP-1, on-created-empty: \"${pkgs.neovide}/bin/neovide -- --cmd 'cd ~/vaults/Knowledge/'\";\
-    workspace 9,monitor:eDP-1, on-created-empty: discord;\
-    workspace 10,monitor:eDP-1"
+    keyword workspace 2,monitor:eDP-1, on-created-empty: alacritty;\
+    keyword workspace 3,monitor:eDP-1;\
+    keyword workspace 4,monitor:eDP-1;\
+    keyword workspace 5,monitor:eDP-1;\
+    keyword workspace 6,monitor:eDP-1, on-created-empty: obsidian;\
+    keyword workspace 7,monitor:eDP-1, on-created-empty: spotify;\
+    keyword workspace 8,monitor:eDP-1, on-created-empty: \"${pkgs.neovide}/bin/neovide -- --cmd 'cd ~/vaults/Knowledge/'\";\
+    keyword workspace 9,monitor:eDP-1, on-created-empty: discord;\
+    keyword workspace 10,monitor:eDP-1"
       '';
       executable = true;
     };
