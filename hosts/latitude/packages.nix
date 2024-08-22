@@ -14,7 +14,7 @@
     qt6ct
     nerdfonts
     (pkgs.writeShellScriptBin "rebuild" ''
-      pushd /home/andy/.config/.nixrc/
+      pushd /home/andy/.nixrc/
       ${pkgs.git}/bin/git diff
       ${pkgs.git}/bin/git add .
       echo "Write a commit message"
