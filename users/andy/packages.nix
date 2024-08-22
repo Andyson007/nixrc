@@ -36,9 +36,7 @@
     ghc
     candy-icons
     (pkgs.writeShellScriptBin "swap_monitor" ''
-      wdisplays_pid=$(${pkgs.wdisplays}/bin/wdisplays &)
       monitor=$(${pkgs.hyprland}/bin/hyprctl monitors  | grep Monitor | awk '{print $2}' | ${pkgs.tofi}/bin/tofi)
-      kill $wdisplays_pid
       ${pkgs.hyprland}/bin/hyprctl dispatch movecurrentworkspacetomonitor $monitor
     '')
     nwg-displays
