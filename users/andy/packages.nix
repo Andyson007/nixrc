@@ -90,11 +90,11 @@
     clang-tools
     lua-language-server
     taplo
-
-    # sql-language-server
+    nixd
     nodePackages_latest.bash-language-server
     haskell-language-server
     nnn
+  # fun stuff
     cowsay
     fortune
     toilet
