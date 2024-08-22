@@ -101,7 +101,6 @@
     neovim
     neovide
     stockfish
-    ollama
     discord
   ]);
 }
