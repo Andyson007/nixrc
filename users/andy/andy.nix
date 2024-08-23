@@ -1,5 +1,9 @@
-{ config, pkgs, nixpkgs-unstable,  ... }:
 {
+  config,
+  pkgs,
+  nixpkgs-unstable,
+  ...
+}: {
   imports = [
     ./packages.nix
     ./kanshi.nix

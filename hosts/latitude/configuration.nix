@@ -1,15 +1,18 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, nixpkgs-unstable, inputs, ... }:
-
 {
-  imports =
-    [
-      ../../hardware-configuration.nix
-      ./packages.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  nixpkgs-unstable,
+  inputs,
+  ...
+}: {
+  imports = [
+    ../../hardware-configuration.nix
+    ./packages.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -18,12 +21,12 @@
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "andyco";
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "Europe/Oslo";
 
   systemd.sleep.extraConfig = ''
-  HibernateDelaySec=3600s
+    HibernateDelaySec=3600s
   '';
 
   # Configure network proxy if necessary
@@ -50,9 +53,9 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.andy = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
-     shell = pkgs.zsh;
+    isNormalUser = true;
+    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
   };
 
   programs.zsh.enable = true;
@@ -103,15 +106,15 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   programs.hyprland.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-        zlib
-        libgcc
+      zlib
+      libgcc
     ];
   };
   security.polkit.enable = true;
@@ -129,6 +132,6 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "0xProto" ]; })
+    (nerdfonts.override {fonts = ["0xProto"];})
   ];
 }
