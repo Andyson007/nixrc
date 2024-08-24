@@ -45,6 +45,22 @@
           exec = "~/.config/kanshi/undocked";
         };
       }
+      {
+        profile = {
+          name = "docked_tv";
+          outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+            {
+              criteria = "description: Samsung Electric Company SAMSUNG 0x01000E00";
+              status = "enable";
+            }
+          ];
+          exec = "~/.config/kanshi/docked_tv";
+        };
+      }
     ];
   };
   home.file = {
@@ -77,6 +93,22 @@
         keyword workspace 8,monitor:eDP-1;\
         keyword workspace 9,monitor:eDP-1, on-created-empty: discord;\
         keyword workspace 10,monitor:eDP-1"
+      '';
+      executable = true;
+    };
+    ".config/kanshi/docked_tv" = {
+      text = ''
+          ${pkgs.hyprland}/bin/hyprctl --batch dispatch "\
+        workspace 1,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00, on-created-empty: alacritty;\
+        keyword workspace 2,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00, on-created-empty: alacritty;\
+        keyword workspace 3,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00;\
+        keyword workspace 4,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00;\
+        keyword workspace 5,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00, on-created-empty: firefox;\
+        keyword workspace 6,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00, on-created-empty: obsidian;\
+        keyword workspace 7,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00, on-created-empty: spotify;\
+        keyword workspace 8,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00;\
+        keyword workspace 9,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00, on-created-empty: discord;\
+        keyword workspace 10,monitor:desc:description: Samsung Electric Company SAMSUNG 0x01000E00"
       '';
       executable = true;
     };
