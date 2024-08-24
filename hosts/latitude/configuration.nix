@@ -36,6 +36,13 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  # console.useXkbConfig makes it follow the xserver
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "dvp";
+  };
+  console.useXkbConfig = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
