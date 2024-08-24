@@ -12,6 +12,7 @@
   imports = [
     ../../hardware-configuration.nix
     ./packages.nix
+    ../../scripts.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
