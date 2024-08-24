@@ -55,6 +55,7 @@
             }
             {
               criteria = "description: Samsung Electric Company SAMSUNG 0x01000E00";
+              scale = 2.0;
               status = "enable";
             }
           ];
