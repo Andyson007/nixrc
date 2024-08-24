@@ -14,8 +14,8 @@
     stateVersion = "24.05"; # DO NOT CHANGE
 
     shellAliases = {
-        a = "ls --color -klAhs";
-        l = "ls --color -klhs";
+      a = "ls --color -klAhs";
+      l = "ls --color -klhs";
     };
   };
 
