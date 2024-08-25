@@ -7,6 +7,7 @@
   imports = [
     ../../hardware-configuration.nix
     ./packages.nix
+    ./disk-config.nix
   ];
 
   boot.loader.grub = {
