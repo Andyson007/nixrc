@@ -2,7 +2,7 @@
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "rebuild" ''
       pushd /home/andy/.nixrc/
-      alejandra . 1> /dev/null
+      alejandra . --quiet
       ${pkgs.git}/bin/git diff
       ${pkgs.git}/bin/git add .
       echo "Write a commit message"
@@ -13,7 +13,7 @@
         ${pkgs.git}/bin/git push origin main
       else
         git reset
-        alejandra . 1> /dev/null
+        alejandra . --quiet
       fi
       popd
     '')
