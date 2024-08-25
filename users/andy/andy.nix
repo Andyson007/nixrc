@@ -19,7 +19,12 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
-
+  home.shellAliases = {
+    a = "${pkgs.lsd}/bin/lsd -AFlg";
+    l = "${pkgs.lsd}/bin/lsd -Flg";
+    lg = "${pkgs.lazygit}/bin/lazygit";
+    vim = "${nixpkgs-unstable.neovim}/bin/nvim";
+  };
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -80,12 +85,6 @@
 
     zsh = {
       enable = true;
-      shellAliases = {
-        a = "${pkgs.lsd}/bin/lsd -AFlg";
-        l = "${pkgs.lsd}/bin/lsd -Flg";
-        lg = "lazygit";
-        vim = "${nixpkgs-unstable.neovim}/bin/nvim";
-      };
       enableCompletion = true;
       syntaxHighlighting.highlighters = [
         "main"
