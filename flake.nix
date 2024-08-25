@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -16,6 +20,7 @@
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    disko,
     ...
   }: {
     nixosConfigurations.live = nixpkgs.lib.nixosSystem rec {
@@ -58,6 +63,16 @@
             };
           };
         }
+      ];
+    };
+    nixosConfigurations.minimal_ssh = nixpkgs.lib.nixosSystem rec {
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit inputs;
+      };
+      modules = [
+        disko.nixosModules.disko
+        ./hosts/minimal-ssh/configuration.nix
       ];
     };
   };

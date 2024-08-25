@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    curl
+    wget
     stdenv
     git
     (writeShellScriptBin "rebuild" ''
