@@ -22,7 +22,9 @@
     home-manager,
     disko,
     ...
-  }: {
+  }: let
+    hardware_config = ./hardware-configuration.nix;
+  in {
     nixosConfigurations.live = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
@@ -35,6 +37,7 @@
       modules = [
         (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
         ./hosts/iso/configuration.nix
+        hardware_config
       ];
     };
     nixosConfigurations.andyco = nixpkgs.lib.nixosSystem rec {
@@ -48,6 +51,7 @@
       };
       modules = [
         ./hosts/latitude/configuration.nix
+        hardware_config
         home-manager.nixosModules.home-manager
         {
           home-manager = {
@@ -72,6 +76,7 @@
       };
       modules = [
         disko.nixosModules.disko
+        hardware_config
         ./hosts/minimal-ssh/configuration.nix
       ];
     };
