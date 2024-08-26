@@ -62,6 +62,24 @@
           exec = "~/.config/kanshi/docked_tv";
         };
       }
+      {
+        profile = {
+          name = "docked_school";
+          outputs = [
+            {
+              criteria = "eDP-1";
+              status = "enable";
+              scale = 1.2;
+            }
+            {
+              criteria = "DUS D27QO 0x00000001";
+              scale = 1.0;
+              status = "enable";
+            }
+          ];
+          exec = "~/.config/kanshi/docked_school";
+        };
+      }
     ];
   };
   home.file = {
