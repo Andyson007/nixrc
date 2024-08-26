@@ -138,7 +138,7 @@
         keyword workspace 2,monitor:eDP-1, on-created-empty: alacritty;\
         keyword workspace 3,monitor:eDP-1;\
         keyword workspace 4,monitor:eDP-1;\
-        keyword workspace 5,monitor:eDP-1;\
+        keyword workspace 5,monitor:desc: DUS D27QO 0x00000001, on-created-empty: firefox;\
         keyword workspace 6,monitor:desc: DUS D27QO 0x00000001, on-created-empty: obsidian;\
         keyword workspace 7,monitor:desc: DUS D27QO 0x00000001, on-created-empty: spotify;\
         keyword workspace 8,monitor:desc: eDP-1;\
