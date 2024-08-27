@@ -12,6 +12,7 @@
   imports = [
     ./packages.nix
     ../../scripts.nix
+    ../../hyprland.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -114,7 +115,6 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  programs.hyprland.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 
   programs.nix-ld = {
