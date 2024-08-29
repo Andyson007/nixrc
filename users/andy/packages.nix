@@ -5,6 +5,8 @@
 }: {
   home.packages =
     (with pkgs; [
+      dotnetCorePackages.sdk_8_0_2xx
+      unipicker
       dunst
       alejandra
       kanshi
