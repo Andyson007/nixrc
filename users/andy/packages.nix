@@ -6,7 +6,6 @@
   home.packages =
     (with pkgs; [
       dotnetCorePackages.sdk_8_0_2xx
-      postgresql
       unipicker
       dunst
       alejandra
