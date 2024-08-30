@@ -64,7 +64,7 @@
       }
       {
         profile = {
-          name = "docked_school";
+          name = "docked_HDMI";
           outputs = [
             {
               criteria = "eDP-1";
@@ -72,12 +72,12 @@
               scale = 1.2;
             }
             {
-              criteria = "DUS D27QO 0x00000001";
+              criteria = "HDMI-A-1";
               scale = 1.0;
               status = "enable";
             }
           ];
-          exec = "~/.config/kanshi/docked_school";
+          exec = "~/.config/kanshi/docked_HDMI";
         };
       }
     ];
@@ -131,18 +131,18 @@
       '';
       executable = true;
     };
-    ".config/kanshi/docked_school" = {
+    ".config/kanshi/docked_HDMI" = {
       text = ''
           ${pkgs.hyprland}/bin/hyprctl --batch dispatch "\
         workspace 1,monitor:desc:DUS D27QO 0x00000001 , on-created-empty: alacritty;\
         keyword workspace 2,monitor:eDP-1, on-created-empty: alacritty;\
         keyword workspace 3,monitor:eDP-1;\
         keyword workspace 4,monitor:eDP-1;\
-        keyword workspace 5,monitor:desc: DUS D27QO 0x00000001, on-created-empty: firefox;\
-        keyword workspace 6,monitor:desc: DUS D27QO 0x00000001, on-created-empty: obsidian;\
-        keyword workspace 7,monitor:desc: DUS D27QO 0x00000001, on-created-empty: spotify;\
-        keyword workspace 8,monitor:desc: eDP-1;\
-        keyword workspace 9,monitor:desc: DUS D27QO 0x00000001, on-created-empty: discord;\
+        keyword workspace 5,monitor:HDMI-A-1, on-created-empty: firefox;\
+        keyword workspace 6,monitor:HDMI-A-1, on-created-empty: obsidian;\
+        keyword workspace 7,monitor:HDMI-A-1, on-created-empty: spotify;\
+        keyword workspace 8,monitor:eDP-1;\
+        keyword workspace 9,monitor:HDMI-A-1, on-created-empty: discord;\
         keyword workspace 10,monitor:desc: eDP-1"
       '';
       executable = true;
