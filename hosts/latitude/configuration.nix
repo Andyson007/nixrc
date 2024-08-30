@@ -71,6 +71,7 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     NIXOS_OZONE_WL = 1;
     QT_QPA_PLATFORMTHEME = "qt6ct";
+    DOTNET_CLI_TELEMTRY_OPTOUT = 1;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
