@@ -5,6 +5,7 @@
 }: {
   home.packages =
     (with pkgs; [
+      fzf
       dotnetCorePackages.sdk_8_0_2xx
       unipicker
       dunst
