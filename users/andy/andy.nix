@@ -108,6 +108,17 @@
       };
     };
 
+    gh = {
+      enable = true;
+      settings = {
+        git_protocol = "ssh";
+      };
+    };
+
+    gh-dash = {
+      enable = true;
+    };
+
     home-manager.enable = true;
   };
 }
