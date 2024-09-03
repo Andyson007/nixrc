@@ -77,7 +77,7 @@
       modules = [
         disko.nixosModules.disko
         hardware_config
-        ./hosts/minimal-ssh/configuration.nix
+        ./hosts/sandyco/configuration.nix
       ];
     };
   };
