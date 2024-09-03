@@ -9,7 +9,6 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
     ./packages.nix
-    ./disk-config.nix
     ../../scripts.nix
   ];
 
@@ -21,7 +20,7 @@
   nixpkgs.config.allowUnfree = true;
 
   networking = {
-    hostName = "andyco-minimal";
+    hostName = "sandyco";
     networkmanager.enable = true;
     wireless.enable = false;
   };
