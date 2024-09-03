@@ -69,7 +69,7 @@
         }
       ];
     };
-    nixosConfigurations."minimal-ssh" = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.sandyco = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
