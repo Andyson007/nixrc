@@ -80,7 +80,7 @@
       haskell-language-server
       csharp-ls
       nnn
-      phpactor
+      nodePackages.intelephense
       # fun stuff
       cowsay
       fortune
