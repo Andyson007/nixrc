@@ -80,6 +80,7 @@
       haskell-language-server
       csharp-ls
       nnn
+      phpactor
       # fun stuff
       cowsay
       fortune
