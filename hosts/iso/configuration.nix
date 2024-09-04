@@ -20,44 +20,17 @@
   nixpkgs.config.allowUnfree = true;
 
   networking = {
-    hostName = "andyco";
+    hostName = "iso";
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
     wireless.enable = false;
   };
 
   time.timeZone = "Europe/Oslo";
 
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=3600s
-  '';
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  hardware = {
-    bluetooth.enable = true;
-    opengl.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.andy = {
     isNormalUser = true;
     extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
   };
 
   programs.zsh.enable = true;
@@ -131,8 +104,4 @@
     dates = "02:00";
     randomizedDelaySec = "45min";
   };
-
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["0xProto"];})
-  ];
 }
