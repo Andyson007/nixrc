@@ -21,7 +21,6 @@
     nixpkgs-unstable,
     home-manager,
     disko,
-    ...
   }: {
     nixosConfigurations.live = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
@@ -65,10 +64,14 @@
         }
       ];
     };
-    nixosConfigurations.sandyco = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.sandyco = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
         inherit inputs;
+        nixpkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
       };
       modules = [
         disko.nixosModules.disko
