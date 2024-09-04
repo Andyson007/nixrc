@@ -10,6 +10,7 @@
   ...
 }: {
   imports = [
+    ./hardware-configuration.nix
     ./packages.nix
     ../../scripts.nix
     ../../hyprland.nix
