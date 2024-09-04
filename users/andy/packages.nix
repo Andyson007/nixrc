@@ -102,8 +102,8 @@
       nixd
       nodePackages_latest.bash-language-server
       haskell-language-server
-      nnn
       csharp-ls
+      nnn
       # fun stuff
       cowsay
       fortune

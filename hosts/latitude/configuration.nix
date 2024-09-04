@@ -13,7 +13,7 @@
     ./hardware-configuration.nix
     ./packages.nix
     ../../scripts.nix
-    ../../hyprland.nix
+    ../../utils/hyprland.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
