@@ -45,10 +45,6 @@
       linuxPackages_latest.perf
       ghc
       candy-icons
-      (pkgs.writeShellScriptBin "swap_monitor" ''
-        monitor=$(${pkgs.hyprland}/bin/hyprctl monitors  | grep Monitor | awk '{print $2}' | ${pkgs.tofi}/bin/tofi)
-        ${pkgs.hyprland}/bin/hyprctl dispatch movecurrentworkspacetomonitor $monitor
-      '')
       nwg-displays
       # Networking
       nmap
