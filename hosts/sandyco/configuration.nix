@@ -38,6 +38,21 @@
   };
 
   services.openssh.enable = true;
+  services = {
+    postgresql = {
+      enable = true;
+      package = pkgs.postgresql_16;
+      authentication = pkgs.lib.mkOverride 10 ''
+        #type database  DBuser  auth-method
+        local all       all     trust
+        host telefonkatalog       all     127.0.0.1/32 scram-sha-256
+      '';
+    };
+    mysql = {
+      enable = true;
+      package = pkgs.mariadb;
+    };
+  };
 
   networking.firewall.allowedTCPPorts = [22];
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
