@@ -7,6 +7,7 @@
     (with pkgs; [
       qemu
       fzf
+      openssl
       dotnetCorePackages.sdk_8_0_2xx
       unipicker
       dunst
@@ -49,29 +50,8 @@
       # Networking
       nmap
       netcat-gnu
-      # Tauri
-      dbus
-      openssl
-      pkg-config
-      glib
-      gtk3
-      libsoup
-      webkitgtk
-      librsvg
-      file
-      cmake
-      gnumake
-      feh
       # Lean
       elan
-
-      # Lichess
-      flutter
-      coursier
-      jdk22
-      corepack_22
-      # mongodb
-      # redis
 
       # Nice rust packages
       zoxide
