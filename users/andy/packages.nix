@@ -24,6 +24,8 @@
       rustup
       obsidian
       spotify
+      stow
+      home-manager
       nodejs
       yarn
       unzip
