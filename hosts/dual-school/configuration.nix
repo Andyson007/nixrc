@@ -56,25 +56,6 @@
     bluetooth.enable = true;
     opengl.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.andy = {
-    isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
-  };
-
-  programs.zsh.enable = true;
-  environment.sessionVariables = {
-    XDG_CONFIG_HOME = "$HOME/.config";
-    NIXOS_OZONE_WL = 1;
-    QT_QPA_PLATFORMTHEME = "qt6ct";
-    DOTNET_CLI_TELEMTRY_OPTOUT = 1;
-  };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
