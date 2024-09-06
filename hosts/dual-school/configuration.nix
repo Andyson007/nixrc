@@ -148,7 +148,6 @@
     enable = true;
     package = pkgs.postgresql_16;
     ensureDatabases = ["assetmanagement"];
-    settings.ssl = true;
     authentication = pkgs.lib.mkOverride 10 ''
       #type database  DBuser  auth-method
       local all       all     trust
