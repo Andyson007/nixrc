@@ -64,6 +64,34 @@
         }
       ];
     };
+    nixosConfigurations.wandyco = nixpkgs.lib.nixosSystem rec {
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit inputs;
+        nixpkgs-unstable = import nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
+      modules = [
+        ./hosts/dual-school/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+
+            users.andy = import ./users/andy/andy.nix;
+            extraSpecialArgs = {
+              nixpkgs-unstable = import nixpkgs-unstable {
+                inherit system;
+                config.allowUnfree = true;
+              };
+            };
+          };
+        }
+      ];
+    };
     nixosConfigurations.sandyco = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
