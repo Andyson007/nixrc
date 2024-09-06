@@ -3,7 +3,10 @@
   nixpkgs-unstable,
   ...
 }: {
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    package = nixpkgs-unstable.hyprland;
+    enable = true;
+  };
   environment.systemPackages =
     (with pkgs; [
       hyprpaper
