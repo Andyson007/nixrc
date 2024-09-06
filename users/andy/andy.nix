@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./packages.nix
-    ./kanshi.nix
   ];
   home.username = "andy";
   home.homeDirectory = "/home/andy";
@@ -79,5 +78,9 @@
     };
 
     home-manager.enable = true;
+  };
+  services.kanshi = {
+    enable = true;
+    systemdTarget = "hyprland-session.target";
   };
 }
