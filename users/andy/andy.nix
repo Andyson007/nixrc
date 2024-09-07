@@ -22,6 +22,7 @@
       (with pkgs; [
         openssl
         fd
+        ntfy-sh
         # VM stuff
         qemu
         nasm
