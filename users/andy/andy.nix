@@ -16,6 +16,7 @@
   users.users."andy" = {
     isNormalUser = true;
     home = "/home/andy";
+    extraGroups = [ "wheel" "networkmanager" ];  
     shell = pkgs.zsh;
     packages =
       (with pkgs; [
@@ -49,7 +50,6 @@
         yarn
         ghc
         dotnetCorePackages.sdk_8_0_2xx
-        make
         cmake
         # Notes
         obsidian
