@@ -49,6 +49,8 @@
         yarn
         ghc
         dotnetCorePackages.sdk_8_0_2xx
+        make
+        cmake
         # Notes
         obsidian
         # Music
