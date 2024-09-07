@@ -88,6 +88,7 @@
         rink
 
         # lsp servers (for nvim)
+        rust-analyzer
         typescript
         nodePackages_latest.typescript-language-server
         biome
