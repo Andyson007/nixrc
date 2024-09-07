@@ -16,22 +16,20 @@
   users.users."andy" = {
     isNormalUser = true;
     home = "/home/andy";
-    extraGroups = [ "wheel" "networkmanager" ];  
+    extraGroups = ["wheel" "networkmanager"];
     shell = pkgs.zsh;
     packages =
       (with pkgs; [
-        qemu
-        fzf
         openssl
-        unipicker
-        dunst
-        alejandra
-        kanshi
         fd
-        alacritty
-        firefox
-        cliphist
+        # VM stuff
+        qemu
+        nasm
+        # pickers
+        fzf
         tofi
+        unipicker
+        cliphist
         # git stuff
         lazygit
         delta
@@ -45,12 +43,13 @@
         jq
         python3
         poetry
-        elan
+        elan # Lean stuff
         nodejs
         yarn
         ghc
         dotnetCorePackages.sdk_8_0_2xx
         cmake
+        alejandra # Foratter for nix
         # Notes
         obsidian
         # Music
@@ -67,6 +66,10 @@
         # Window manager stuff
         slurp
         grim
+        dunst
+        kanshi
+        alacritty
+        firefox
         # rest
         unzip
         entr
