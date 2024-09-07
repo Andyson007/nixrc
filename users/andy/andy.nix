@@ -104,6 +104,7 @@
         csharp-ls
         nodePackages.intelephense
         vale
+        asm-lsp
         # fun stuff
         cowsay
         fortune
