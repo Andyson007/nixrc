@@ -12,6 +12,7 @@
     QT_QPA_PLATFORMTHEME = "qt6ct";
     DOTNET_CLI_TELEMTRY_OPTOUT = 1;
     EDITOR = "nvim";
+    DOTNET_CLI_TELEMETRY_OPTOUT = 1;
   };
 
   users.users."andy" = {
