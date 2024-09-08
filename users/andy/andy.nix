@@ -52,6 +52,7 @@
         ghc
         dotnetCorePackages.sdk_8_0_2xx
         cmake
+        gnumake
         alejandra # Foratter for nix
         # Notes
         obsidian
