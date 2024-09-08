@@ -5,6 +5,7 @@
   ...
 }: {
   programs.zsh.enable = true;
+  programs.fish.enable = true;
   environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
     NIXOS_OZONE_WL = 1;
