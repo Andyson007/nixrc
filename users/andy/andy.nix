@@ -54,6 +54,8 @@
         cmake
         gnumake
         alejandra # Foratter for nix
+        # os stuff
+        cargo-binutils
         # Notes
         obsidian
         # Music
@@ -90,6 +92,8 @@
         ripgrep
         cargo-generate
         rink
+        speedtest-rs
+        trippy
 
         # lsp servers (for nvim)
         rust-analyzer
