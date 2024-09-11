@@ -13,6 +13,8 @@
     ../../scripts.nix
   ];
 
+  hardware.opengl.enable = true;
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -36,6 +38,7 @@
 
   environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
+    LD_LIBRARY_PATH="/run/opengl-driver/lib:/run/opengl-driver-32/lib";
   };
 
   services.openssh.enable = true;
