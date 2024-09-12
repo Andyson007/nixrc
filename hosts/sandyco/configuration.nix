@@ -38,7 +38,7 @@
 
   environment.sessionVariables = {
     XDG_CONFIG_HOME = "$HOME/.config";
-    LD_LIBRARY_PATH="/run/opengl-driver/lib:/run/opengl-driver-32/lib";
+    LD_LIBRARY_PATH = "/run/opengl-driver/lib:/run/opengl-driver-32/lib";
   };
 
   services.openssh.enable = true;
