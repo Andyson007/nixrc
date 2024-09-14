@@ -19,6 +19,7 @@
   andy.sshKeys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINC9w9ABoLRmP7PwW95gWvkrx/QiSde0vdrCKW8rOnhV andy@nixos"
   ];
+  services.openssh.enable = true;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
