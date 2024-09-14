@@ -35,6 +35,7 @@
       packages =
         (with pkgs; [
           openssl
+          pkg-config
           fd
           ntfy-sh
           # VM stuff
