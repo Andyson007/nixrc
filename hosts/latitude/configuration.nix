@@ -16,7 +16,9 @@
     ../../utils/hyprland.nix
     ../../users/andy/andy.nix
   ];
-
+  andy.sshKeys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINC9w9ABoLRmP7PwW95gWvkrx/QiSde0vdrCKW8rOnhV andy@nixos"
+  ];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
