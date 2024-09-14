@@ -129,6 +129,8 @@
       local all       all     trust
       host assetmanagement       all     127.0.0.1/32 scram-sha-256
       host assetmanagement       all     ::1/128 scram-sha-256
+      host vern                  all     127.0.0.1/32 scram-sha-256
+      host vern                  all     ::1/128 scram-sha-256
     '';
   };
 }
