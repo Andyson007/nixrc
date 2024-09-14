@@ -9,9 +9,8 @@
     inherit (lib) mkOption types;
   in {
     sshKeys = mkOption {
-      type = types.listOf types.int;
+      type = types.listOf types.str;
       default = [];
-      name = "Authorized keys for ssh";
       example = "andy.sshKeys = [
         ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF9n+QZCLeyMKBqNFIEgZ2hfaH81s+xrIDvgzBiuGwVw
       ]";
