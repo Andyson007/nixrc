@@ -42,7 +42,6 @@
       };
       modules = [
         ./hosts/latitude/configuration.nix
-        ./users/andy/andy.nix
       ];
     };
     nixosConfigurations.wandyco = nixpkgs.lib.nixosSystem rec {
@@ -56,7 +55,6 @@
       };
       modules = [
         ./hosts/dual-school/configuration.nix
-        ./users/andy/andy.nix
       ];
     };
     nixosConfigurations.sandyco = nixpkgs.lib.nixosSystem rec {

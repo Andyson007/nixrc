@@ -1,8 +1,5 @@
 {
-  config,
-  lib,
   pkgs,
-  nixpkgs-unstable,
   inputs,
   ...
 }: {
@@ -11,6 +8,7 @@
     ./packages.nix
     ../../scripts.nix
     ../../utils/hyprland.nix
+    ../../users/andy/andy.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
