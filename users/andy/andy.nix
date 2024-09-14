@@ -23,6 +23,7 @@
       XDG_CONFIG_HOME = "$HOME/.config";
       NIXOS_OZONE_WL = 1;
       EDITOR = "nvim";
+      NIX_BUILD_SHELL = "zsh";
       DOTNET_CLI_TELEMETRY_OPTOUT = 1;
     };
 
