@@ -20,8 +20,14 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  networking.hostName = "wandyco";
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking = {
+    hostName = "wandyco";
+    networkmanager.enable = true; # Easiest to use and most distros use this by default.
+    extraHosts = ''
+      127.0.0.1 attacker.com
+      ::1 attacker.com
+    '';
+  };
 
   time.timeZone = "Europe/Oslo";
 
