@@ -18,6 +18,7 @@
   };
 
   config = {
+    services.atuin.enable = true;
     programs.zsh.enable = true;
     environment.sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.config";
@@ -38,6 +39,7 @@
           pkg-config
           fd
           ntfy-sh
+          atuin
           # VM stuff
           qemu
           nasm
