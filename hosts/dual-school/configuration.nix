@@ -8,6 +8,7 @@
     ./packages.nix
     ../../scripts.nix
     ../../utils/hyprland.nix
+    ../../utils/syncthing.nix
     ../../users/andy/andy.nix
   ];
 
