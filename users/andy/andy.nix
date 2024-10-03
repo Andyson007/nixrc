@@ -113,7 +113,6 @@
           trippy
 
           # lsp servers (for nvim)
-          rust-analyzer
           typescript
           nodePackages_latest.typescript-language-server
           biome
@@ -135,12 +134,15 @@
           cowsay
           fortune
           toilet
+          # games
+          prismlauncher
         ])
         ++ (with nixpkgs-unstable; [
           neovim
           neovide
           stockfish
           discord
+          rust-analyzer
         ]);
     };
   };
