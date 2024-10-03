@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   services.syncthing = {
     enable = true;
     user = "andy";
@@ -13,6 +10,6 @@
   environment.systemPackages = [
     pkgs.syncthing
   ];
-  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; 
-  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
+  networking.firewall.allowedUDPPorts = [22000 21027];
 }
