@@ -36,6 +36,7 @@
       packages =
         (with pkgs; [
           openssl
+          usbutils
           pkg-config
           fd
           ntfy-sh
