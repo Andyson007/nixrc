@@ -20,6 +20,9 @@
   config = {
     services.atuin.enable = true;
     programs.zsh.enable = true;
+    virtualisation.virtualbox.host.enable = true;
+    users.extraGroups.vboxusers.members = ["andy"];
+
     environment.sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.config";
       NIXOS_OZONE_WL = 1;
@@ -35,6 +38,7 @@
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages =
         (with pkgs; [
+          virtualbox
           openssl
           usbutils
           pkg-config
@@ -137,6 +141,7 @@
           toilet
           # games
           prismlauncher
+          openjdk17
         ])
         ++ (with nixpkgs-unstable; [
           neovim
