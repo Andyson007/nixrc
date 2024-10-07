@@ -38,7 +38,6 @@
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages =
         (with pkgs; [
-          virtualbox
           openssl
           usbutils
           pkg-config
