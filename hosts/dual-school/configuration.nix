@@ -28,6 +28,12 @@
       127.0.0.1 attacker.com
       ::1 attacker.com
     '';
+    vlans = {
+      vlan45 = {
+        id = 45;
+        interface = "enp3s0f0";
+      };
+    };
   };
 
   time.timeZone = "Europe/Oslo";

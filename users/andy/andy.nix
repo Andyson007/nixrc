@@ -60,6 +60,7 @@
           git
           # programming language stuff
           rustup
+          gdb
           bacon
           go
           jq
@@ -122,6 +123,7 @@
           biome
           vscode-langservers-extracted
           emmet-language-server
+          emmet-ls
           tailwindcss
           tailwindcss-language-server
           clang-tools
