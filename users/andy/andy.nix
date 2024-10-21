@@ -38,6 +38,7 @@
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages =
         (with pkgs; [
+          libreoffice
           openssl
           usbutils
           pkg-config
@@ -60,6 +61,7 @@
           git
           # programming language stuff
           rustup
+          wasm-pack
           gdb
           bacon
           go
