@@ -18,8 +18,19 @@
   };
 
   config = {
-    services.atuin.enable = true;
-    programs.zsh.enable = true;
+    services = {
+      atuin.enable = true;
+      printing = {
+        enable = true;
+        drivers = [
+          pkgs.epson-escpr
+        ];
+      };
+    };
+    programs = {
+      zsh.enable = true;
+      direnv.enable = true;
+    };
     virtualisation.virtualbox.host.enable = true;
     users.extraGroups.vboxusers.members = ["andy"];
 
@@ -39,6 +50,7 @@
       packages =
         (with pkgs; [
           libreoffice
+          sqlx-cli
           openssl
           usbutils
           pkg-config
@@ -145,6 +157,7 @@
           # games
           prismlauncher
           openjdk17
+          openjdk8
         ])
         ++ (with nixpkgs-unstable; [
           neovim

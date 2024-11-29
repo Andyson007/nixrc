@@ -144,6 +144,8 @@
       host assetmanagement       all     ::1/128 scram-sha-256
       host verneanbud            all     127.0.0.1/32 scram-sha-256
       host verneanbud            all     ::1/128 scram-sha-256
+      host phproject             all     127.0.0.1/32 scram-sha-256
+      host phproject             all     ::1/128 scram-sha-256
     '';
   };
 }
