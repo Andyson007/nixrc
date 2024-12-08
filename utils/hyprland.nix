@@ -4,8 +4,9 @@
   ...
 }: {
   programs.hyprland = {
-    package = nixpkgs-unstable.hyprland;
     enable = true;
+    # xwayland.enable = true;
+    # withUWSM = true;
   };
   environment.systemPackages =
     (with pkgs; [

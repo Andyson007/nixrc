@@ -57,6 +57,8 @@
           fd
           ntfy-sh
           atuin
+          geogebra6
+          gimp
           # VM stuff
           qemu
           nasm
@@ -84,7 +86,7 @@
           nodejs
           yarn
           ghc
-          dotnetCorePackages.sdk_8_0_2xx
+          dotnetCorePackages.sdk_8_0_4xx
           cmake
           gnumake
           alejandra # Foratter for nix
