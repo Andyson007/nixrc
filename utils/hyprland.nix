@@ -14,6 +14,6 @@
       hypridle
     ])
     ++ [
-      nixpkgs-unstable.hyprlock
+      nixpkgs-unstable.swaylock
     ];
 }
