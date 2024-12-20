@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options.virt-manager = let
@@ -8,12 +9,14 @@
   in {
     username = mkOption {
       type = types.str;
-      default = "andy";
       example = "andy";
     };
   };
   config = {
     programs.virt-manager.enable = true;
+    environment.systemPackages = [
+      pkgs.virt-viewer
+    ];
     users.groups.libvrtd.members = [config.virt-manager.username];
     virtualisation = {
       libvirtd.enable = true;
