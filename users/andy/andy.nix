@@ -160,10 +160,11 @@
           prismlauncher
           openjdk17
           openjdk8
-        ])
-        ++ (with nixpkgs-unstable; [
+          #editor stuff
           neovim
           neovide
+        ])
+        ++ (with nixpkgs-unstable; [
           stockfish
           discord
           rust-analyzer

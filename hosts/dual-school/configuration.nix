@@ -9,6 +9,7 @@
     ../../scripts.nix
     ../../utils/hyprland.nix
     ../../utils/syncthing.nix
+    ../../utils/virt-manager.nix
     ../../users/andy/andy.nix
   ];
 
