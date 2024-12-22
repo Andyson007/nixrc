@@ -59,6 +59,7 @@
           atuin
           geogebra6
           gimp
+          upower
           # VM stuff
           qemu
           nasm
