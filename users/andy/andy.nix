@@ -20,12 +20,7 @@
   config = {
     services = {
       atuin.enable = true;
-      printing = {
-        enable = true;
-        drivers = [
-          pkgs.epson-escpr
-        ];
-      };
+      upower.enable = true;
     };
     programs = {
       zsh.enable = true;
@@ -59,7 +54,6 @@
           atuin
           geogebra6
           gimp
-          upower
           # VM stuff
           qemu
           nasm
