@@ -8,5 +8,6 @@
     gcc
     wget
     git
+    vim
   ];
 }

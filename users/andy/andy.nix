@@ -39,7 +39,7 @@
     users.users."andy" = {
       isNormalUser = true;
       home = "/home/andy";
-      extraGroups = ["wheel" "networkmanager"];
+      extraGroups = ["wheel" "networkmanager" "dialout"];
       shell = pkgs.zsh;
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages =

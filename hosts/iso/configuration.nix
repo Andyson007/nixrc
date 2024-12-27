@@ -2,10 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 {
-  config,
-  lib,
   pkgs,
-  nixpkgs-unstable,
   inputs,
   ...
 }: {
@@ -33,12 +30,12 @@
     extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
   };
 
-  programs.zsh.enable = true;
-  environment.sessionVariables = {
-    XDG_CONFIG_HOME = "$HOME/.config";
-    NIXOS_OZONE_WL = 1;
-    QT_QPA_PLATFORMTHEME = "qt6ct";
-  };
+  # programs.zsh.enable = true;
+  # environment.sessionVariables = {
+  #   XDG_CONFIG_HOME = "$HOME/.config";
+  #   NIXOS_OZONE_WL = 1;
+  #   QT_QPA_PLATFORMTHEME = "qt6ct";
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -81,27 +78,27 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  programs.hyprland.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  # programs.hyprland.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      zlib
-      libgcc
-    ];
-  };
-  security.polkit.enable = true;
-
-  system.autoUpgrade = {
-    enable = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
-  };
+  # programs.nix-ld = {
+  #   enable = true;
+  #   libraries = with pkgs; [
+  #     zlib
+  #     libgcc
+  #   ];
+  # };
+  # security.polkit.enable = true;
+  #
+  # system.autoUpgrade = {
+  #   enable = true;
+  #   flake = inputs.self.outPath;
+  #   flags = [
+  #     "--update-input"
+  #     "nixpkgs"
+  #     "-L" # print build logs
+  #   ];
+  #   dates = "02:00";
+  #   randomizedDelaySec = "45min";
+  # };
 }
