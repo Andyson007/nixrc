@@ -26,8 +26,6 @@
       zsh.enable = true;
       direnv.enable = true;
     };
-    virtualisation.virtualbox.host.enable = true;
-    users.extraGroups.vboxusers.members = ["andy"];
 
     environment.sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.config";
@@ -45,18 +43,13 @@
       packages =
         (with pkgs; [
           libreoffice
-          sqlx-cli
           openssl
           usbutils
           pkg-config
-          fd
           ntfy-sh
           atuin
           geogebra6
           gimp
-          # VM stuff
-          qemu
-          nasm
           # pickers
           fzf
           tofi
@@ -66,7 +59,6 @@
           lazygit
           delta
           stow
-          gh
           git
           # programming language stuff
           rustup
@@ -92,8 +84,6 @@
           # Music
           spotify
           pulsemixer
-          # modelling
-          blender
           # styling
           fastfetch
           bat
@@ -111,11 +101,8 @@
           ungoogled-chromium
           # rest
           unzip
-          entr
           btop
           xxd
-          linuxPackages_latest.perf
-          nwg-displays
           # Networking
           nmap
           netcat-gnu
