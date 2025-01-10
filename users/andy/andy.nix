@@ -65,7 +65,6 @@
           wasm-pack
           gdb
           bacon
-          go
           jq
           python3
           poetry
@@ -134,7 +133,6 @@
           nodePackages.intelephense
           vale
           asm-lsp
-          gopls
           # fun stuff
           cowsay
           fortune
