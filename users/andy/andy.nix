@@ -134,6 +134,7 @@
           nodePackages.intelephense
           vale
           asm-lsp
+          gopls
           # fun stuff
           cowsay
           fortune
