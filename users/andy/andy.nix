@@ -43,6 +43,7 @@
       packages =
         (with pkgs; [
           libreoffice
+          sqlx-cli
           openssl
           usbutils
           pkg-config
@@ -61,7 +62,6 @@
           stow
           git
           # programming language stuff
-          rustup
           wasm-pack
           gdb
           bacon
@@ -69,7 +69,6 @@
           python3
           poetry
           elan # Lean stuff
-          nodejs
           yarn
           ghc
           dotnetCorePackages.sdk_8_0_4xx
@@ -149,6 +148,8 @@
           stockfish
           discord
           rust-analyzer
+          nodejs
+          rustup
         ]);
     };
   };
