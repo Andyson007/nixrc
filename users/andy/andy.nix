@@ -42,8 +42,8 @@
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages =
         (with pkgs; [
+          php
           libreoffice
-          sqlx-cli
           openssl
           usbutils
           pkg-config
@@ -62,13 +62,10 @@
           stow
           git
           # programming language stuff
-          wasm-pack
           gdb
           bacon
           jq
           python3
-          poetry
-          elan # Lean stuff
           yarn
           ghc
           dotnetCorePackages.sdk_8_0_4xx
@@ -86,7 +83,6 @@
           fastfetch
           bat
           starship
-          ags
           lsd
           # Window manager stuff
           slurp
@@ -103,14 +99,12 @@
           xxd
           # Networking
           nmap
-          netcat-gnu
           # Nice rust packages
           zoxide
           dust
           ripgrep
           cargo-generate
           rink
-          speedtest-rs
           trippy
 
           # lsp servers (for nvim)
