@@ -21,6 +21,7 @@
     services = {
       atuin.enable = true;
       upower.enable = true;
+      gvfs.enable = true;
     };
     programs = {
       zsh.enable = true;
@@ -42,7 +43,6 @@
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages =
         (with pkgs; [
-          php
           libreoffice
           openssl
           usbutils
@@ -67,13 +67,9 @@
           jq
           python3
           yarn
-          ghc
-          dotnetCorePackages.sdk_8_0_4xx
           cmake
           gnumake
           alejandra # Foratter for nix
-          # os stuff
-          cargo-binutils
           # Notes
           obsidian
           # Music
