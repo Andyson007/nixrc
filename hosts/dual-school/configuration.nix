@@ -151,6 +151,8 @@
       host oppdrag2             all     ::1/128 scram-sha-256
       host bank             all     127.0.0.1/32 scram-sha-256
       host bank             all     ::1/128 scram-sha-256
+      host hvahoot             all     127.0.0.1/32 scram-sha-256
+      host hvahoot             all     ::1/128 scram-sha-256
     '';
   };
 
