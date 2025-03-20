@@ -64,6 +64,7 @@
           git
           # programming language stuff
           gdb
+          ghc
           bacon
           jq
           python3
