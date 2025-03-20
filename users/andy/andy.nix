@@ -74,6 +74,7 @@
           obsidian
           # Music
           spotify
+          spotifyd
           pulsemixer
           # styling
           fastfetch
