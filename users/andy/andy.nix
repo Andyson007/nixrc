@@ -22,6 +22,7 @@
       atuin.enable = true;
       upower.enable = true;
       gvfs.enable = true;
+      spotifyd.enable = true;
     };
     programs = {
       zsh.enable = true;
@@ -74,7 +75,6 @@
           obsidian
           # Music
           spotify
-          spotifyd
           pulsemixer
           # styling
           fastfetch
