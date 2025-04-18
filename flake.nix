@@ -27,8 +27,14 @@
         };
       };
       modules = [
-        (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
-        ./hosts/iso/configuration.nix
+        ({
+          pkgs,
+          modulesPath,
+          ...
+        }: {
+          imports = [(modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix")];
+          environment.systemPackages = [pkgs.neovim];
+        })
       ];
     };
     nixosConfigurations.andyco = nixpkgs.lib.nixosSystem rec {

@@ -10,6 +10,7 @@
     ../../utils/hyprland.nix
     ../../utils/syncthing.nix
     ../../utils/virt-manager.nix
+    ../../utils/postgres.nix
     ../../users/andy/andy.nix
   ];
 
@@ -74,27 +75,22 @@
     randomizedDelaySec = "45min";
   };
 
-  services.postgresql = {
-    enable = true;
-    package = pkgs.postgresql_16;
-    settings.ssl = true;
-    authentication = pkgs.lib.mkOverride 10 ''
-      #type database           DBuser  auth-method
-      local all                all     trust
-      host  assetmanagement    all     127.0.0.1/32 scram-sha-256
-      host  assetmanagement    all     ::1/128 scram-sha-256
-      host  verneanbud         all     127.0.0.1/32 scram-sha-256
-      host  verneanbud         all     ::1/128 scram-sha-256
-      host  phproject          all     127.0.0.1/32 scram-sha-256
-      host  phproject          all     ::1/128 scram-sha-256
-      host  oppdrag2           all     127.0.0.1/32 scram-sha-256
-      host  oppdrag2           all     ::1/128 scram-sha-256
-      host  bank               all     127.0.0.1/32 scram-sha-256
-      host  bank               all     ::1/128 scram-sha-256
-      host  hvahoot            all     127.0.0.1/32 scram-sha-256
-      host  hvahoot            all     ::1/128 scram-sha-256
-    '';
-  };
+  postgres.extraAuth = [
+    "host  assetmanagement    all     127.0.0.1/32 scram-sha-256"
+    "host  assetmanagement    all     ::1/128 scram-sha-256"
+    "host  verneanbud         all     127.0.0.1/32 scram-sha-256"
+    "host  verneanbud         all     ::1/128 scram-sha-256"
+    "host  phproject          all     127.0.0.1/32 scram-sha-256"
+    "host  phproject          all     ::1/128 scram-sha-256"
+    "host  oppdrag2           all     127.0.0.1/32 scram-sha-256"
+    "host  oppdrag2           all     ::1/128 scram-sha-256"
+    "host  bank               all     127.0.0.1/32 scram-sha-256"
+    "host  bank               all     ::1/128 scram-sha-256"
+    "host  hvahoot            all     127.0.0.1/32 scram-sha-256"
+    "host  hvahoot            all     ::1/128 scram-sha-256"
+    "host  cooking            all     127.0.0.1/32 scram-sha-256"
+    "host  cooking            all     ::1/128 scram-sha-256"
+  ];
 
   virt-manager.username = "andy";
 }

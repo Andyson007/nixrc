@@ -8,6 +8,6 @@
     gcc
     wget
     git
-    vim
+    neovim
   ];
 }

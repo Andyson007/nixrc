@@ -28,7 +28,6 @@
   };
 
   config = {
-
     console.useXkbConfig = true;
 
     services = {
@@ -71,7 +70,7 @@
     users.users."andy" = {
       isNormalUser = true;
       home = "/home/andy";
-      extraGroups = ["wheel" "networkmanager" "dialout"];
+      extraGroups = ["wheel" "networkmanager" "dialout" "disk"];
       shell = pkgs.zsh;
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages = import ./packages.nix {
