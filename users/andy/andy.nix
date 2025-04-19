@@ -35,7 +35,7 @@
     };
   };
 
-  imports = [ ./wm.nix ];
+  imports = [./wm.nix];
 
   config = {
     console.useXkbConfig = true;
@@ -92,5 +92,12 @@
     fonts.packages = with pkgs; [
       (nerdfonts.override {fonts = ["0xProto"];})
     ];
+
+    services.cron = {
+      enable = true;
+      systemCronJobs = [
+        "* * * * * andy ${../../scripts/red_outline_low_battery.sh}"
+      ];
+    };
   };
 }
