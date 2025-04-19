@@ -1,22 +1,18 @@
 {
   pkgs,
   nixpkgs-unstable,
+  enable_de_stuff,
+  ...
 }:
 with pkgs;
   [
-    libreoffice
     openssl
     usbutils
     pkg-config
     ntfy-sh
     atuin
-    geogebra6
-    gimp
     # pickers
     fzf
-    tofi
-    unipicker
-    cliphist
     # git stuff
     lazygit
     delta
@@ -35,19 +31,12 @@ with pkgs;
     # Notes
     obsidian
     # Music
-    spotify
     pulsemixer
     # styling
     fastfetch
     bat
     starship
     lsd
-    # Window manager stuff
-    slurp
-    grim
-    dunst
-    kanshi
-    alacritty
     # browser
     firefox
     ungoogled-chromium
@@ -89,13 +78,31 @@ with pkgs;
     fortune
     toilet
     # games
-    prismlauncher
     openjdk17
     openjdk8
     #editor stuff
     neovim
-    neovide
   ]
+  ++ (
+    if enable_de_stuff
+    then [
+      prismlauncher
+      slurp
+      grim
+      dunst
+      kanshi
+      alacritty
+      spotify
+      tofi
+      geogebra6
+      libreoffice
+      cliphist
+      gimp
+      unipicker
+      neovide
+    ]
+    else []
+  )
   ++ (with nixpkgs-unstable; [
     stockfish
     discord

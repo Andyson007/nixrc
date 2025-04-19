@@ -35,7 +35,7 @@
     };
   };
 
-  imports = [./wm.nix];
+  imports = [ ./wm.nix ];
 
   config = {
     console.useXkbConfig = true;
@@ -85,6 +85,7 @@
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages = import ./packages.nix {
         inherit pkgs nixpkgs-unstable;
+        enable_de_stuff = config.andy.windowmanager.enable;
       };
     };
 
