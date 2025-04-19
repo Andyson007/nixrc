@@ -8,6 +8,12 @@
   options.andy = let
     inherit (lib) mkOption types;
   in {
+    windowmanager = {
+      enable = mkOption {
+        type = types.bool;
+        default = true;
+      };
+    };
     hostName = mkOption {
       type = types.str;
       example = "andyco";
@@ -16,7 +22,7 @@
     sshKeys = mkOption {
       type = types.listOf types.str;
       default = [];
-      example = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF9n+QZCLeyMKBqNFIEgZ2hfaH81s+xrIDvgzBiuGwVw";
+      example = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF9n+QZCLeyMKBqNFIEgZ2hfaH81s+xrIDvgzBiuGwVw"];
     };
     timeZone = mkOption {
       type = types.str;
@@ -28,6 +34,8 @@
       default = true;
     };
   };
+
+  imports = [./wm.nix];
 
   config = {
     console.useXkbConfig = true;

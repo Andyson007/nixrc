@@ -5,9 +5,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
     ../../scripts.nix
-    ../../utils/hyprland.nix
     ../../utils/syncthing.nix
     ../../utils/virt-manager.nix
     ../../utils/postgres.nix
@@ -48,26 +46,8 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  services.displayManager.sddm.wayland.enable = true;
 
   security.polkit.enable = true;
-
-  postgres.extraAuth = [
-    "host  assetmanagement    all     127.0.0.1/32 scram-sha-256"
-    "host  assetmanagement    all     ::1/128 scram-sha-256"
-    "host  verneanbud         all     127.0.0.1/32 scram-sha-256"
-    "host  verneanbud         all     ::1/128 scram-sha-256"
-    "host  phproject          all     127.0.0.1/32 scram-sha-256"
-    "host  phproject          all     ::1/128 scram-sha-256"
-    "host  oppdrag2           all     127.0.0.1/32 scram-sha-256"
-    "host  oppdrag2           all     ::1/128 scram-sha-256"
-    "host  bank               all     127.0.0.1/32 scram-sha-256"
-    "host  bank               all     ::1/128 scram-sha-256"
-    "host  hvahoot            all     127.0.0.1/32 scram-sha-256"
-    "host  hvahoot            all     ::1/128 scram-sha-256"
-    "host  cooking            all     127.0.0.1/32 scram-sha-256"
-    "host  cooking            all     ::1/128 scram-sha-256"
-  ];
 
   virt-manager.username = "andy";
 }
