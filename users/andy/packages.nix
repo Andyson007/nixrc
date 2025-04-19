@@ -100,6 +100,7 @@ with pkgs;
       gimp
       unipicker
       neovide
+      brightnessctl
     ]
     else []
   )
