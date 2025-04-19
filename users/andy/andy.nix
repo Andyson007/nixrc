@@ -8,6 +8,11 @@
   options.andy = let
     inherit (lib) mkOption types;
   in {
+    hostName = mkOption {
+      type = types.str;
+      example = "andyco";
+      default = "andyco";
+    };
     sshKeys = mkOption {
       type = types.listOf types.str;
       default = [];
@@ -21,9 +26,6 @@
     allowUnfree = mkOption {
       type = types.bool;
       default = true;
-    };
-    hostName = mkOption {
-      type = types.str;
     };
   };
 

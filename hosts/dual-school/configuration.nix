@@ -11,6 +11,8 @@
     ../../utils/syncthing.nix
     ../../utils/virt-manager.nix
     ../../utils/postgres.nix
+    ../../utils/autoUpgrade.nix
+    ../../utils/nix-ld.nix
     ../../users/andy/andy.nix
   ];
 
@@ -38,12 +40,6 @@
     };
   };
 
-  # Enable the OpenSSH daemon.
-  # services.openssh = {
-  #   enable = true;
-  #   settings.passwordAuthentication = true;
-  # };
-
   # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
   # so changing it will NOT upgrade your system - see https://nixos.org/manual/nixos/stable/#sec-upgrading for how
   # to actually do that.
@@ -54,26 +50,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   services.displayManager.sddm.wayland.enable = true;
 
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      zlib
-      libgcc
-    ];
-  };
   security.polkit.enable = true;
-
-  system.autoUpgrade = {
-    enable = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
-  };
 
   postgres.extraAuth = [
     "host  assetmanagement    all     127.0.0.1/32 scram-sha-256"

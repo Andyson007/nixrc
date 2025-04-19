@@ -19,7 +19,8 @@
       enable = true;
       package = pkgs.postgresql_16;
       settings.ssl = true;
-      authentication = ''
+      authentication =
+        ''
           #type database           DBuser  auth-method
           local all                all     trust
         ''
