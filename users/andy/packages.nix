@@ -20,6 +20,7 @@ with pkgs;
     git
     # programming language stuff
     gdb
+    gcc
     ghc
     bacon
     jq
@@ -82,6 +83,7 @@ with pkgs;
     openjdk8
     #editor stuff
     neovim
+    wget
   ]
   ++ (
     if enable_de_stuff
@@ -101,6 +103,7 @@ with pkgs;
       unipicker
       neovide
       brightnessctl
+      newsflash
     ]
     else []
   )
@@ -111,4 +114,5 @@ with pkgs;
     nodejs
     spotifyd
     rustup
+    ed
   ])

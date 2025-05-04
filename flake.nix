@@ -33,8 +33,8 @@
           ...
         }: {
           imports = [(modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix")];
-          environment.systemPackages = [pkgs.neovim];
         })
+        ./hosts/iso/configuration.nix
       ];
     };
     nixosConfigurations.andyco = nixpkgs.lib.nixosSystem rec {

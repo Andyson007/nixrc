@@ -38,6 +38,7 @@
   imports = [./wm.nix];
 
   config = {
+    hardware.bluetooth.enable = true;
     console.useXkbConfig = true;
 
     services = {

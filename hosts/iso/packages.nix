@@ -1,8 +1,4 @@
-{
-  pkgs,
-  nixpkgs-unstable,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     stdenv
     gcc
