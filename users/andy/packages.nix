@@ -6,6 +6,7 @@
 }:
 with pkgs;
   [
+    cargo-bootimage
     openssl
     usbutils
     pkg-config
@@ -99,11 +100,11 @@ with pkgs;
       geogebra6
       libreoffice
       cliphist
-      gimp
       unipicker
       neovide
       brightnessctl
       newsflash
+      nixpkgs-unstable.gimp3
     ]
     else []
   )

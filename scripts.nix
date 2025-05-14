@@ -39,5 +39,8 @@
       monitor=$(${pkgs.hyprland}/bin/hyprctl monitors  | grep Monitor | awk '{print $2}' | ${pkgs.tofi}/bin/tofi)
       ${pkgs.hyprland}/bin/hyprctl dispatch movecurrentworkspacetomonitor $monitor
     '')
+    (pkgs.writeShellScriptBin "mirror" ''
+      ${pkgs.hyprland}/bin/hyprctl keyword monitor HDMI-A-1, preferred, auto, 1, mirror, eDP-1
+    '')
   ];
 }
