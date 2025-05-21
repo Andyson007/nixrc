@@ -55,7 +55,7 @@
         alsa.support32Bit = true;
         pulse.enable = true;
       };
-      services.cron = {
+      cron = {
         enable = true;
         systemCronJobs = [
           "* * * * * andy ${../../scripts/red_outline_low_battery.sh}"
