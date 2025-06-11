@@ -120,10 +120,6 @@
     randomizedDelaySec = "45min";
   };
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["0xProto"];})
-  ];
-
   services.postgresql = {
     enable = true;
     package = pkgs.postgresql_16;

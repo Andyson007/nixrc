@@ -7,11 +7,14 @@
 with pkgs;
   [
     cargo-bootimage
+    newsboat
     openssl
     usbutils
     pkg-config
     ntfy-sh
     atuin
+    dotnetCorePackages.sdk_9_0_1xx
+    spotify
     # pickers
     fzf
     # git stuff
@@ -38,7 +41,7 @@ with pkgs;
     fastfetch
     bat
     starship
-    lsd
+    eza
     # browser
     firefox
     ungoogled-chromium
@@ -49,12 +52,15 @@ with pkgs;
     # Networking
     nmap
     # Nice rust packages
+    fd
+    rusty-man
     zoxide
     dust
     ripgrep
     cargo-generate
     rink
     trippy
+    xh
 
     # lsp servers (for nvim)
     typescript
@@ -73,6 +79,7 @@ with pkgs;
     haskell-language-server
     csharp-ls
     nodePackages.intelephense
+    fsautocomplete
     vale
     asm-lsp
     # fun stuff
@@ -94,9 +101,9 @@ with pkgs;
       grim
       dunst
       kanshi
-      alacritty
-      spotify
+      kitty
       tofi
+      ncspot
       geogebra6
       libreoffice
       cliphist
@@ -113,7 +120,7 @@ with pkgs;
     discord
     rust-analyzer
     nodejs
-    spotifyd
     rustup
     ed
+    presenterm
   ])

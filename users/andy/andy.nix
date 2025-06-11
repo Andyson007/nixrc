@@ -64,8 +64,9 @@
     };
 
     programs = {
-      zsh.enable = true;
+      fish.enable = true;
       direnv.enable = true;
+      steam.enable = true;
     };
 
     networking = {
@@ -88,7 +89,7 @@
       isNormalUser = true;
       home = "/home/andy";
       extraGroups = ["wheel" "networkmanager" "dialout" "disk"];
-      shell = pkgs.zsh;
+      shell = pkgs.fish;
       openssh.authorizedKeys.keys = config.andy.sshKeys;
       packages = import ./packages.nix {
         inherit pkgs nixpkgs-unstable;
@@ -96,8 +97,8 @@
       };
     };
 
-    fonts.packages = with pkgs; [
-      (nerdfonts.override {fonts = ["0xProto"];})
+    fonts.packages = [
+      pkgs.nerd-fonts._0xproto
     ];
   };
 }

@@ -9,7 +9,6 @@
       xdg-desktop-portal-wlr
       xdg-utils
       qt6ct
-      nerdfonts
     ];
     services.displayManager.sddm.wayland.enable = true;
   };
